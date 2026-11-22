@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import AppHeader from "@/components/AppHeader";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
 export const metadata: Metadata = {
-  title: "Workout App",
-  description: "Theo dõi lịch trình workout",
+  title: { default: "Workout App", template: "%s · Workout App" },
+  description: "Lộ trình tập bodyweight tại nhà theo giai đoạn, tiếng Việt, không quảng cáo.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AppHeader />
+        {children}
+      </body>
     </html>
   );
 }

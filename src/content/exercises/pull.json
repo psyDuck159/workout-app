@@ -1,0 +1,276 @@
+[
+  {
+    "id": "towel-row",
+    "nameVi": "Kéo khăn ở cửa",
+    "nameEn": "Door Towel Row",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["arms"],
+    "household": ["towel", "door"],
+    "measure": "reps",
+    "difficulty": 1,
+    "steps": [
+      "Vắt một chiếc khăn dày qua tay nắm cửa (cả hai phía), đóng cửa lại và kiểm tra cửa đã chốt chắc.",
+      "Nắm hai đầu khăn, chân đặt gần chân cửa, ngả người ra sau đến khi tay duỗi thẳng.",
+      "Giữ thân thẳng, kéo ngực về phía cửa, ép hai bả vai lại với nhau.",
+      "Hạ người từ từ về tư thế ban đầu."
+    ],
+    "commonMistakes": [
+      "Kéo về phía cửa mở — cửa có thể bật ra.",
+      "Gù lưng, kéo bằng tay thay vì bằng lưng."
+    ],
+    "tips": ["Chân càng gần cửa, người càng ngả nhiều thì càng khó."],
+    "contraindications": ["Cửa hoặc tay nắm không chắc chắn — không tập."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "band-row",
+    "nameVi": "Kéo dây kháng lực",
+    "nameEn": "Band Row",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["arms", "shoulders"],
+    "equipment": ["resistance_band"],
+    "household": ["door"],
+    "measure": "reps",
+    "difficulty": 2,
+    "steps": [
+      "Neo dây kháng lực ngang ngực (kẹp vào khe cửa bằng neo dây, hoặc quấn quanh cột chắc chắn).",
+      "Cầm hai đầu dây, lùi ra đến khi dây căng nhẹ, đứng thẳng, gối hơi chùng.",
+      "Kéo hai tay về sát sườn, ép bả vai lại.",
+      "Thả tay về từ từ, không để dây giật."
+    ],
+    "commonMistakes": ["Nhún vai lên tai.", "Ngả người ra sau để kéo."],
+    "tips": ["Lùi xa hơn hoặc dùng dây nặng hơn để tăng độ khó."],
+    "contraindications": ["Dây bị nứt, sờn — thay dây mới."],
+    "media": null,
+    "sources": [
+      {
+        "title": "NHS — Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/"
+      }
+    ]
+  },
+  {
+    "id": "table-row-bent-knee",
+    "nameVi": "Kéo người dưới bàn (gập gối)",
+    "nameEn": "Bent-knee Table Row",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["arms"],
+    "household": ["table"],
+    "measure": "reps",
+    "difficulty": 3,
+    "steps": [
+      "Nằm ngửa dưới một chiếc bàn chắc chắn, nắm mép bàn rộng bằng vai.",
+      "Gập gối, bàn chân đặt trên sàn, nâng hông để thân thẳng từ vai đến gối.",
+      "Kéo ngực lên chạm mép bàn, ép bả vai lại.",
+      "Hạ người từ từ đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": [
+      "Dùng bàn nhẹ hoặc chân bàn yếu — bàn có thể lật.",
+      "Hông rơi xuống khi kéo."
+    ],
+    "contraindications": ["Bàn không chịu được trọng lượng cơ thể — không tập."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "inverted-row",
+    "nameVi": "Kéo người dưới bàn (duỗi chân)",
+    "nameEn": "Inverted Row",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["arms", "core"],
+    "household": ["table"],
+    "measure": "reps",
+    "difficulty": 4,
+    "steps": [
+      "Nằm ngửa dưới bàn chắc chắn (hoặc xà thấp), nắm mép bàn rộng bằng vai.",
+      "Duỗi thẳng chân, tựa gót xuống sàn, siết bụng mông để thân thẳng.",
+      "Kéo ngực lên chạm mép bàn, khuỷu tay hướng ra sau.",
+      "Hạ người từ từ đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Hông võng.", "Kéo cằm lên thay vì kéo ngực."],
+    "tips": ["Kê chân lên ghế để tăng độ khó."],
+    "contraindications": ["Bàn không chịu được trọng lượng cơ thể — không tập."],
+    "media": { "frames": ["inverted-row/0.webp", "inverted-row/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Inverted Row",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Inverted_Row.json"
+      },
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "dead-hang",
+    "nameVi": "Treo xà",
+    "nameEn": "Dead Hang",
+    "primaryMuscles": ["back", "arms"],
+    "secondaryMuscles": ["shoulders"],
+    "equipment": ["pullup_bar"],
+    "measure": "time",
+    "difficulty": 2,
+    "steps": [
+      "Nắm xà rộng hơn vai một chút, lòng bàn tay hướng ra trước.",
+      "Nhấc chân lên, để người treo thẳng, vai hơi kéo xuống khỏi tai.",
+      "Giữ trong thời gian mục tiêu, thở đều.",
+      "Đặt chân xuống ghế/sàn rồi mới buông tay."
+    ],
+    "commonMistakes": ["Buông tay đột ngột.", "Đung đưa người."],
+    "tips": ["Kiểm tra xà đã lắp chắc trước mỗi buổi tập."],
+    "contraindications": ["Chấn thương vai, khuỷu tay hoặc cổ tay."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "scapular-pull-up",
+    "nameVi": "Kéo bả vai trên xà",
+    "nameEn": "Scapular Pull-up",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["shoulders"],
+    "equipment": ["pullup_bar"],
+    "measure": "reps",
+    "difficulty": 3,
+    "steps": [
+      "Treo xà với tay thẳng.",
+      "Không gập khuỷu tay, kéo hai bả vai xuống và ép lại để người nhích lên vài cm.",
+      "Giữ 1 giây rồi thả bả vai về từ từ."
+    ],
+    "commonMistakes": ["Gập khuỷu tay.", "Thả rơi bả vai thay vì hạ có kiểm soát."],
+    "contraindications": ["Chấn thương vai."],
+    "media": {
+      "frames": ["scapular-pull-up/0.webp", "scapular-pull-up/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Scapular Pull-Up",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Scapular_Pull-Up.json"
+      }
+    ]
+  },
+  {
+    "id": "negative-pull-up",
+    "nameVi": "Hạ người chậm trên xà (negative)",
+    "nameEn": "Negative Pull-up",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["arms"],
+    "equipment": ["pullup_bar"],
+    "household": ["chair"],
+    "measure": "reps",
+    "difficulty": 5,
+    "steps": [
+      "Đứng lên ghế để cằm đã ở trên xà, nắm xà rộng bằng vai.",
+      "Nhấc chân khỏi ghế, giữ cằm trên xà.",
+      "Hạ người thật chậm (3–5 giây) đến khi tay duỗi thẳng.",
+      "Đặt chân lại lên ghế và lặp lại."
+    ],
+    "commonMistakes": ["Rơi nhanh ở nửa dưới.", "Nhảy từ ghế lên gây giật vai."],
+    "contraindications": ["Chấn thương vai hoặc khuỷu tay."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "band-assisted-pull-up",
+    "nameVi": "Hít xà có dây hỗ trợ",
+    "nameEn": "Band-assisted Pull-up",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["arms"],
+    "equipment": ["pullup_bar", "resistance_band"],
+    "measure": "reps",
+    "difficulty": 5,
+    "steps": [
+      "Buộc dây kháng lực vòng qua xà, luồn một bàn chân hoặc đầu gối vào vòng dây.",
+      "Nắm xà rộng bằng vai, treo thẳng tay.",
+      "Kéo người lên đến khi cằm qua xà.",
+      "Hạ người chậm đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Bật nảy ở đáy nhờ dây.", "Dây tuột khỏi chân — kiểm tra kỹ trước khi tập."],
+    "tips": ["Chuyển dần sang dây nhẹ hơn trước khi tập hít xà không hỗ trợ."],
+    "contraindications": ["Dây bị nứt, sờn — thay dây mới."],
+    "media": {
+      "frames": ["band-assisted-pull-up/0.webp", "band-assisted-pull-up/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Band Assisted Pull-Up",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Band_Assisted_Pull-Up.json"
+      }
+    ]
+  },
+  {
+    "id": "chin-up",
+    "nameVi": "Hít xà ngửa tay",
+    "nameEn": "Chin-up",
+    "primaryMuscles": ["back", "arms"],
+    "secondaryMuscles": ["core"],
+    "equipment": ["pullup_bar"],
+    "measure": "reps",
+    "difficulty": 6,
+    "steps": [
+      "Nắm xà rộng bằng vai, lòng bàn tay hướng về phía mặt.",
+      "Treo thẳng tay, kéo bả vai xuống.",
+      "Kéo người lên đến khi cằm qua xà.",
+      "Hạ người có kiểm soát đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Đung đưa, đá chân để mượn lực.", "Không duỗi hết tay ở đáy."],
+    "contraindications": ["Đau khuỷu tay hoặc vai."],
+    "media": { "frames": ["chin-up/0.webp", "chin-up/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Chin-Up",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Chin-Up.json"
+      }
+    ]
+  },
+  {
+    "id": "pull-up",
+    "nameVi": "Hít xà sấp tay",
+    "nameEn": "Pull-up",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["arms", "core"],
+    "equipment": ["pullup_bar"],
+    "measure": "reps",
+    "difficulty": 7,
+    "steps": [
+      "Nắm xà rộng hơn vai một chút, lòng bàn tay hướng ra trước.",
+      "Treo thẳng tay, kéo bả vai xuống.",
+      "Kéo người lên đến khi cằm qua xà.",
+      "Hạ người có kiểm soát đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Kipping (đá người) khi chưa có nền tảng.", "Chỉ kéo nửa biên độ."],
+    "contraindications": ["Đau khuỷu tay hoặc vai."],
+    "media": { "frames": ["pull-up/0.webp", "pull-up/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Pullups",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Pullups.json"
+      },
+      {
+        "title": "wger — Pull-ups",
+        "url": "https://wger.de/en/exercise/475/view/"
+      }
+    ]
+  }
+]

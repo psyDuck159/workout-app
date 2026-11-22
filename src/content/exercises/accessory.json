@@ -1,0 +1,127 @@
+[
+  {
+    "id": "band-pull-apart",
+    "nameVi": "Kéo giãn dây kháng lực",
+    "nameEn": "Band Pull-apart",
+    "primaryMuscles": ["shoulders", "back"],
+    "equipment": ["resistance_band"],
+    "measure": "reps",
+    "difficulty": 1,
+    "steps": [
+      "Đứng thẳng, cầm dây kháng lực bằng hai tay rộng bằng vai, tay duỗi thẳng trước ngực.",
+      "Kéo dây giãn sang hai bên đến khi dây chạm ngực, ép bả vai lại.",
+      "Thả về từ từ."
+    ],
+    "commonMistakes": ["Nhún vai.", "Gập khuỷu tay quá nhiều."],
+    "contraindications": ["Dây bị nứt, sờn — thay dây mới."],
+    "media": {
+      "frames": ["band-pull-apart/0.webp", "band-pull-apart/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Band Pull Apart",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Band_Pull_Apart.json"
+      }
+    ]
+  },
+  {
+    "id": "band-shoulder-press",
+    "nameVi": "Đẩy vai với dây kháng lực",
+    "nameEn": "Band Shoulder Press",
+    "primaryMuscles": ["shoulders"],
+    "secondaryMuscles": ["arms"],
+    "equipment": ["resistance_band"],
+    "measure": "reps",
+    "difficulty": 2,
+    "steps": [
+      "Giẫm lên giữa dây, cầm hai đầu dây ngang vai.",
+      "Siết bụng, đẩy hai tay thẳng lên trên đầu.",
+      "Hạ về ngang vai có kiểm soát."
+    ],
+    "commonMistakes": ["Ưỡn lưng khi đẩy.", "Dây tuột dưới chân."],
+    "contraindications": ["Đau vai khi đưa tay qua đầu."],
+    "media": {
+      "frames": ["band-shoulder-press/0.webp", "band-shoulder-press/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Shoulder Press - With Bands",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Shoulder_Press_-_With_Bands.json"
+      }
+    ]
+  },
+  {
+    "id": "band-squat",
+    "nameVi": "Squat với dây kháng lực",
+    "nameEn": "Band Squat",
+    "primaryMuscles": ["legs"],
+    "secondaryMuscles": ["glutes"],
+    "equipment": ["resistance_band"],
+    "measure": "reps",
+    "difficulty": 3,
+    "steps": [
+      "Giẫm lên dây bằng hai chân rộng bằng vai, kéo hai đầu dây lên ngang vai.",
+      "Squat xuống như squat thường, giữ dây căng.",
+      "Đứng lên, đẩy hông về trước."
+    ],
+    "commonMistakes": ["Gối đổ vào trong.", "Dây trượt khỏi chân."],
+    "contraindications": ["Đau gối cấp tính."],
+    "media": {
+      "frames": ["band-squat/0.webp", "band-squat/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Squats - With Bands",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Squats_-_With_Bands.json"
+      }
+    ]
+  },
+  {
+    "id": "bench-dips",
+    "nameVi": "Chống đẩy sau ghế (dips)",
+    "nameEn": "Bench Dips",
+    "primaryMuscles": ["arms"],
+    "secondaryMuscles": ["chest", "shoulders"],
+    "household": ["chair"],
+    "measure": "reps",
+    "difficulty": 3,
+    "steps": [
+      "Ngồi trên mép ghế chắc chắn (kê sát tường), hai tay chống mép ghế cạnh hông.",
+      "Trượt mông ra khỏi ghế, gối gập, bàn chân đặt sàn.",
+      "Gập khuỷu tay hạ người đến khi cánh tay trên gần song song sàn.",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Hạ quá sâu gây áp lực lên vai.", "Khuỷu tay bè ra hai bên."],
+    "contraindications": ["Đau vai trước — bỏ bài này."],
+    "media": { "frames": ["bench-dips/0.webp", "bench-dips/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Bench Dips",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Bench_Dips.json"
+      }
+    ]
+  },
+  {
+    "id": "superman",
+    "nameVi": "Superman (nằm sấp nâng tay chân)",
+    "nameEn": "Superman",
+    "primaryMuscles": ["back"],
+    "secondaryMuscles": ["glutes"],
+    "measure": "reps",
+    "difficulty": 1,
+    "steps": [
+      "Nằm sấp, tay duỗi thẳng qua đầu, chân duỗi thẳng.",
+      "Siết mông, nhấc tay, ngực và chân khỏi sàn vài cm.",
+      "Giữ 2 giây rồi hạ xuống."
+    ],
+    "commonMistakes": ["Ngửa cổ quá mức — nhìn xuống sàn.", "Nâng quá cao gây đau lưng."],
+    "contraindications": ["Đau lưng dưới."],
+    "media": { "frames": ["superman/0.webp", "superman/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Superman",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Superman.json"
+      }
+    ]
+  }
+]

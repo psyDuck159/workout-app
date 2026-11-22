@@ -23,7 +23,11 @@ Ngày kiểm tra: 22/11/2026. Kiểm tra trực tiếp qua GitHub API và wger R
 - Có sẵn: Pushups, Incline Push-Up, Push-Ups With Feet Elevated, Close Triceps Push-Up, Single-Arm Push-Up, Bodyweight Squat, Butt Lift (Bridge), Single Leg Glute Bridge, Plank, Side Bridge, Bench Dips, Handstand Push-Ups, Pullups, Chin-Up, Hanging Leg Raise…
 
 **Rủi ro:** Hai repo đều tuyên bố public domain nhưng không ghi ai là tác giả gốc của ảnh. Nếu ảnh được lấy từ nơi khác thì tuyên bố Unlicense không có hiệu lực với ảnh đó.
-**Cách giảm thiểu:** ghi nguồn đầy đủ trong `ATTRIBUTION.json`, mỗi ảnh có `id` để thay thế độc lập; nếu có khiếu nại thì gỡ và thay ảnh wger/SVG.
+
+**Quan sát khi tải về (Sprint 1):** các ảnh là ảnh chụp chuyên nghiệp trong cùng một phòng gym (tường đỏ, giá tạ), phong cách giống thư viện bài tập của một trang thể hình thương mại. Đây là dấu hiệu ảnh có thể không thực sự thuộc public domain → **rủi ro nâng lên mức cao**. Khuyến nghị: dùng tạm cho MVP cá nhân/thử nghiệm; trước khi phát hành công khai rộng rãi, thay dần bằng ảnh wger/Wikimedia/SVG tự vẽ.
+
+Ảnh wger của Bulgarian split squat là hình minh họa có cầm tạ đơn và nhãn cơ tiếng Tây Ban Nha; ảnh pistol squat có cầm đĩa tạ làm đối trọng — chấp nhận được nhưng nên thay khi có ảnh bodyweight tốt hơn.
+**Cách giảm thiểu:** ghi nguồn đầy đủ trong `src/content/media-attribution.json`, mỗi ảnh có `id` để thay thế độc lập; nếu có khiếu nại thì gỡ và thay ảnh wger/SVG.
 
 ## 2. wger.de
 
@@ -43,7 +47,7 @@ Dùng cho bài còn thiếu (VD: dead hang, hollow body). Mỗi file ghi giấy 
 
 Towel row, inverted row dưới bàn, scapular pull, band-assisted pull-up, negative pull-up, dead hang, hollow body, dead bug, Pallof press, shrimp squat, wall walk, band pull-apart. Bài nào không tìm được ảnh hợp lệ thì vẽ SVG.
 
-## 5. Định dạng ghi công (`public/media/ATTRIBUTION.json`)
+## 5. Định dạng ghi công (`src/content/media-attribution.json`)
 
 ```json
 {

@@ -1,13 +1,58 @@
-import PhaseSelector from "@/components/PhaseSelector";
+import Link from "next/link";
+import { defaultProgram, exercises } from "@/content";
 
 export default function Home() {
+  const program = defaultProgram;
+  const firstPhase = program.phases[0];
+
   return (
-    <main className="min-h-screen bg-gray-100 py-8">
-      <div className="text-center">
-        <h1 className="mb-4 text-3xl font-bold">Lịch Trình Workout Bodyweight</h1>
-        <p className="mb-8">Chọn giai đoạn để bắt đầu theo dõi.</p>
-        <PhaseSelector />
-      </div>
+    <main className="mx-auto max-w-2xl space-y-6 px-4 py-8">
+      <header className="space-y-2">
+        <h1 className="text-3xl font-bold">Tập bodyweight tại nhà</h1>
+        <p className="text-muted-foreground">
+          Lộ trình theo giai đoạn, không quảng cáo, miễn phí. Tập được không cần dụng cụ, hoặc với
+          xà đơn và dây kháng lực.
+        </p>
+      </header>
+
+      <section className="bg-card space-y-3 rounded-lg border p-4">
+        <h2 className="font-semibold">{program.nameVi}</h2>
+        <p className="text-muted-foreground text-sm">
+          {program.phases.length} giai đoạn · {program.phases.reduce((n, p) => n + p.weeks, 0)} tuần
+        </p>
+        <div className="flex flex-wrap gap-2">
+          <Link
+            href={`/program/phase/${firstPhase.id}`}
+            className="bg-primary text-primary-foreground inline-flex h-11 items-center rounded-md px-4 text-sm font-medium"
+          >
+            Xem giai đoạn 1
+          </Link>
+          <Link
+            href="/program"
+            className="inline-flex h-11 items-center rounded-md border px-4 text-sm font-medium"
+          >
+            Toàn bộ chương trình
+          </Link>
+        </div>
+      </section>
+
+      <section className="bg-card space-y-3 rounded-lg border p-4">
+        <h2 className="font-semibold">Thư viện bài tập</h2>
+        <p className="text-muted-foreground text-sm">
+          {exercises.length} bài tập kèm hướng dẫn, lỗi thường gặp và ảnh minh họa.
+        </p>
+        <Link
+          href="/exercises"
+          className="inline-flex h-11 items-center rounded-md border px-4 text-sm font-medium"
+        >
+          Mở thư viện
+        </Link>
+      </section>
+
+      <p className="text-muted-foreground text-xs">
+        Nội dung tham khảo từ nguồn công khai, chưa được chuyên gia kiểm duyệt. Hỏi ý kiến bác sĩ
+        nếu bạn có vấn đề sức khỏe.
+      </p>
     </main>
   );
 }

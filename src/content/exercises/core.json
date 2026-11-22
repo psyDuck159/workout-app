@@ -1,0 +1,168 @@
+[
+  {
+    "id": "dead-bug",
+    "nameVi": "Dead bug (bọ ngửa)",
+    "nameEn": "Dead Bug",
+    "primaryMuscles": ["core"],
+    "measure": "reps_each_side",
+    "difficulty": 1,
+    "steps": [
+      "Nằm ngửa, hai tay duỗi thẳng lên trần, hông và gối gập 90°.",
+      "Ép lưng dưới xuống sàn.",
+      "Duỗi một tay ra sau đầu đồng thời duỗi chân đối diện ra gần sàn.",
+      "Trở về và đổi bên."
+    ],
+    "commonMistakes": ["Lưng dưới bật khỏi sàn.", "Làm quá nhanh."],
+    "tips": ["Thở ra khi duỗi tay chân."],
+    "media": { "frames": ["dead-bug/0.webp", "dead-bug/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Dead Bug",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Dead_Bug.json"
+      }
+    ]
+  },
+  {
+    "id": "plank",
+    "nameVi": "Plank",
+    "nameEn": "Plank",
+    "primaryMuscles": ["core"],
+    "secondaryMuscles": ["shoulders"],
+    "measure": "time",
+    "difficulty": 2,
+    "steps": [
+      "Chống hai cẳng tay xuống sàn, khuỷu tay dưới vai.",
+      "Duỗi chân ra sau, nâng người để thân thẳng từ đầu đến gót.",
+      "Siết bụng và mông, giữ trong thời gian mục tiêu, thở đều."
+    ],
+    "commonMistakes": ["Hông võng hoặc chổng cao.", "Nín thở."],
+    "tips": ["Quỳ gối nếu chưa giữ được 20 giây với chân thẳng."],
+    "media": { "frames": ["plank/0.webp", "plank/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Plank",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Plank.json"
+      },
+      {
+        "title": "wger — Plank",
+        "url": "https://wger.de/en/exercise/458/view/"
+      }
+    ]
+  },
+  {
+    "id": "hollow-body-tuck",
+    "nameVi": "Hollow body co gối",
+    "nameEn": "Tuck Hollow Body Hold",
+    "primaryMuscles": ["core"],
+    "measure": "time",
+    "difficulty": 3,
+    "steps": [
+      "Nằm ngửa, ép lưng dưới xuống sàn.",
+      "Co gối về phía ngực, nhấc vai và đầu khỏi sàn, tay duỗi dọc thân.",
+      "Giữ tư thế, lưng dưới luôn chạm sàn."
+    ],
+    "commonMistakes": ["Lưng dưới bật khỏi sàn.", "Gập cổ quá mức."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "hollow-body",
+    "nameVi": "Hollow body (thân cong)",
+    "nameEn": "Hollow Body Hold",
+    "primaryMuscles": ["core"],
+    "measure": "time",
+    "difficulty": 5,
+    "steps": [
+      "Nằm ngửa, ép lưng dưới xuống sàn.",
+      "Duỗi tay qua đầu, duỗi thẳng chân, nhấc tay, vai và chân khỏi sàn.",
+      "Giữ thân cong như chiếc thuyền, lưng dưới chạm sàn."
+    ],
+    "commonMistakes": ["Lưng dưới bật khỏi sàn — nâng chân cao hơn để dễ hơn."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "side-plank",
+    "nameVi": "Plank nghiêng",
+    "nameEn": "Side Plank",
+    "primaryMuscles": ["core"],
+    "secondaryMuscles": ["shoulders", "glutes"],
+    "measure": "time",
+    "difficulty": 3,
+    "steps": [
+      "Nằm nghiêng, chống cẳng tay dưới vai, hai chân chồng lên nhau.",
+      "Nâng hông lên để thân thẳng từ đầu đến chân.",
+      "Giữ trong thời gian mục tiêu rồi đổi bên."
+    ],
+    "commonMistakes": ["Hông rơi xuống.", "Xoay thân về phía trước."],
+    "tips": ["Co gối dưới để dễ hơn."],
+    "contraindications": ["Đau vai bên chống."],
+    "media": { "frames": ["side-plank/0.webp", "side-plank/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Side Bridge",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Side_Bridge.json"
+      }
+    ]
+  },
+  {
+    "id": "hanging-knee-raise",
+    "nameVi": "Treo xà co gối",
+    "nameEn": "Hanging Knee Raise",
+    "primaryMuscles": ["core"],
+    "secondaryMuscles": ["arms"],
+    "equipment": ["pullup_bar"],
+    "measure": "reps",
+    "difficulty": 4,
+    "steps": [
+      "Treo xà, tay thẳng, vai kéo xuống.",
+      "Co gối lên ngang hông hoặc cao hơn, cuộn nhẹ xương chậu.",
+      "Hạ chân chậm, không đung đưa."
+    ],
+    "commonMistakes": ["Đung đưa người để lấy đà."],
+    "contraindications": ["Chấn thương vai."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "hanging-leg-raise",
+    "nameVi": "Treo xà nâng chân thẳng",
+    "nameEn": "Hanging Leg Raise",
+    "primaryMuscles": ["core"],
+    "secondaryMuscles": ["arms"],
+    "equipment": ["pullup_bar"],
+    "measure": "reps",
+    "difficulty": 7,
+    "steps": [
+      "Treo xà, tay thẳng, vai kéo xuống.",
+      "Giữ chân thẳng, nâng chân lên ngang hông hoặc cao hơn.",
+      "Hạ chân chậm có kiểm soát."
+    ],
+    "commonMistakes": ["Đung đưa.", "Gập gối giữa chừng."],
+    "contraindications": ["Chấn thương vai, đau lưng dưới."],
+    "media": {
+      "frames": ["hanging-leg-raise/0.webp", "hanging-leg-raise/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Hanging Leg Raise",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Hanging_Leg_Raise.json"
+      }
+    ]
+  }
+]

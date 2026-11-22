@@ -1,0 +1,330 @@
+{
+  "id": "foundation-12w",
+  "nameVi": "Nền tảng Bodyweight 12 tuần",
+  "descriptionVi": "Lộ trình 3 giai đoạn × 4 tuần, 3 buổi/tuần xen kẽ buổi A và B. Tuần cuối mỗi giai đoạn là tuần giảm tải (deload). Tự chọn bài theo dụng cụ: không dụng cụ, xà đơn, dây kháng lực.",
+  "phases": [
+    {
+      "id": "foundation",
+      "order": 1,
+      "titleVi": "Giai đoạn 1: Xây dựng nền tảng",
+      "goalVi": "Học kỹ thuật chuẩn, làm quen khối lượng tập, xây sức bền cơ bản.",
+      "weeks": 4,
+      "deloadLastWeek": true,
+      "sessions": [
+        {
+          "id": "A",
+          "titleVi": "Toàn thân A",
+          "items": [
+            {
+              "ladderId": "push-horizontal",
+              "sets": 3,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            },
+            {
+              "ladderId": "row",
+              "sets": 3,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            },
+            {
+              "ladderId": "squat",
+              "sets": 3,
+              "repsMin": 10,
+              "repsMax": 15,
+              "restSec": 90
+            },
+            {
+              "ladderId": "core",
+              "sets": 3,
+              "repsMin": 8,
+              "repsMax": 10,
+              "secondsMin": 20,
+              "secondsMax": 40,
+              "restSec": 60
+            },
+            {
+              "exerciseId": "band-pull-apart",
+              "requires": "resistance_band",
+              "sets": 2,
+              "repsMin": 12,
+              "repsMax": 15,
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "titleVi": "Toàn thân B",
+          "items": [
+            {
+              "ladderId": "push-vertical",
+              "sets": 3,
+              "repsMin": 6,
+              "repsMax": 10,
+              "secondsMin": 15,
+              "secondsMax": 30,
+              "restSec": 90
+            },
+            {
+              "ladderId": "pull-vertical",
+              "requires": "pullup_bar",
+              "sets": 3,
+              "repsMin": 5,
+              "repsMax": 8,
+              "secondsMin": 15,
+              "secondsMax": 30,
+              "restSec": 90
+            },
+            {
+              "ladderId": "row",
+              "sets": 2,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            },
+            {
+              "ladderId": "hinge",
+              "sets": 3,
+              "repsMin": 10,
+              "repsMax": 15,
+              "restSec": 90
+            },
+            {
+              "exerciseId": "side-plank",
+              "sets": 2,
+              "secondsMin": 20,
+              "secondsMax": 30,
+              "restSec": 60
+            },
+            {
+              "exerciseId": "superman",
+              "sets": 2,
+              "repsMin": 10,
+              "repsMax": 12,
+              "restSec": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "order": 2,
+      "titleVi": "Giai đoạn 2: Tăng cường độ",
+      "goalVi": "Tăng số hiệp, chuyển lên biến thể khó hơn, rút ngắn thời gian nghỉ hợp lý.",
+      "weeks": 4,
+      "deloadLastWeek": true,
+      "sessions": [
+        {
+          "id": "A",
+          "titleVi": "Toàn thân A",
+          "items": [
+            {
+              "ladderId": "push-horizontal",
+              "sets": 4,
+              "repsMin": 6,
+              "repsMax": 10,
+              "restSec": 120
+            },
+            {
+              "ladderId": "row",
+              "sets": 4,
+              "repsMin": 6,
+              "repsMax": 10,
+              "restSec": 120
+            },
+            {
+              "ladderId": "squat",
+              "sets": 4,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 120
+            },
+            {
+              "ladderId": "core",
+              "sets": 3,
+              "repsMin": 10,
+              "repsMax": 12,
+              "secondsMin": 30,
+              "secondsMax": 45,
+              "restSec": 60
+            },
+            {
+              "exerciseId": "bench-dips",
+              "sets": 3,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "titleVi": "Toàn thân B",
+          "items": [
+            {
+              "ladderId": "push-vertical",
+              "sets": 4,
+              "repsMin": 5,
+              "repsMax": 8,
+              "secondsMin": 20,
+              "secondsMax": 30,
+              "restSec": 120
+            },
+            {
+              "ladderId": "pull-vertical",
+              "requires": "pullup_bar",
+              "sets": 4,
+              "repsMin": 4,
+              "repsMax": 8,
+              "secondsMin": 20,
+              "secondsMax": 40,
+              "restSec": 120
+            },
+            {
+              "ladderId": "row",
+              "sets": 3,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            },
+            {
+              "ladderId": "hinge",
+              "sets": 4,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            },
+            {
+              "ladderId": "core-hanging",
+              "requires": "pullup_bar",
+              "sets": 3,
+              "repsMin": 6,
+              "repsMax": 10,
+              "restSec": 90
+            },
+            {
+              "exerciseId": "side-plank",
+              "sets": 3,
+              "secondsMin": 30,
+              "secondsMax": 45,
+              "restSec": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advance",
+      "order": 3,
+      "titleVi": "Giai đoạn 3: Nâng cao",
+      "goalVi": "Tập biến thể khó với ít lần lặp hơn, hướng tới kỹ năng: hít xà, chống đẩy một tay, squat một chân.",
+      "weeks": 4,
+      "deloadLastWeek": true,
+      "sessions": [
+        {
+          "id": "A",
+          "titleVi": "Toàn thân A",
+          "items": [
+            {
+              "ladderId": "push-horizontal",
+              "sets": 4,
+              "repsMin": 5,
+              "repsMax": 8,
+              "restSec": 150
+            },
+            {
+              "ladderId": "row",
+              "sets": 4,
+              "repsMin": 6,
+              "repsMax": 10,
+              "restSec": 120
+            },
+            {
+              "ladderId": "squat",
+              "sets": 4,
+              "repsMin": 6,
+              "repsMax": 10,
+              "restSec": 150
+            },
+            {
+              "ladderId": "core",
+              "sets": 3,
+              "repsMin": 10,
+              "repsMax": 12,
+              "secondsMin": 30,
+              "secondsMax": 60,
+              "restSec": 60
+            },
+            {
+              "exerciseId": "band-squat",
+              "requires": "resistance_band",
+              "sets": 3,
+              "repsMin": 10,
+              "repsMax": 15,
+              "restSec": 90
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "titleVi": "Toàn thân B",
+          "items": [
+            {
+              "ladderId": "push-vertical",
+              "sets": 4,
+              "repsMin": 4,
+              "repsMax": 8,
+              "secondsMin": 20,
+              "secondsMax": 45,
+              "restSec": 150
+            },
+            {
+              "ladderId": "pull-vertical",
+              "requires": "pullup_bar",
+              "sets": 4,
+              "repsMin": 3,
+              "repsMax": 6,
+              "secondsMin": 30,
+              "secondsMax": 45,
+              "restSec": 150
+            },
+            {
+              "ladderId": "row",
+              "sets": 3,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            },
+            {
+              "ladderId": "hinge",
+              "sets": 4,
+              "repsMin": 6,
+              "repsMax": 10,
+              "restSec": 120
+            },
+            {
+              "ladderId": "core-hanging",
+              "requires": "pullup_bar",
+              "sets": 3,
+              "repsMin": 6,
+              "repsMax": 10,
+              "restSec": 90
+            },
+            {
+              "exerciseId": "band-shoulder-press",
+              "requires": "resistance_band",
+              "sets": 3,
+              "repsMin": 8,
+              "repsMax": 12,
+              "restSec": 90
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

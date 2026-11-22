@@ -1,0 +1,284 @@
+[
+  {
+    "id": "assisted-squat",
+    "nameVi": "Squat có tay vịn",
+    "nameEn": "Assisted Squat",
+    "primaryMuscles": ["legs"],
+    "secondaryMuscles": ["glutes"],
+    "household": ["door", "chair"],
+    "measure": "reps",
+    "difficulty": 1,
+    "steps": [
+      "Đứng đối diện khung cửa hoặc lưng ghế chắc chắn, hai tay vịn nhẹ.",
+      "Chân rộng bằng vai, mũi chân hơi mở ra ngoài.",
+      "Đẩy hông ra sau và hạ người như ngồi xuống ghế, dùng tay giữ thăng bằng.",
+      "Đứng lên bằng sức chân, tay chỉ trợ lực khi cần."
+    ],
+    "commonMistakes": ["Kéo bằng tay thay vì đứng lên bằng chân.", "Gối đổ vào trong."],
+    "tips": ["Đặt ghế phía sau và chạm mông vào ghế để biết độ sâu."],
+    "contraindications": ["Đau gối cấp tính."],
+    "media": null,
+    "sources": [
+      {
+        "title": "NHS — Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/"
+      }
+    ]
+  },
+  {
+    "id": "bodyweight-squat",
+    "nameVi": "Squat",
+    "nameEn": "Bodyweight Squat",
+    "primaryMuscles": ["legs"],
+    "secondaryMuscles": ["glutes", "core"],
+    "measure": "reps",
+    "difficulty": 2,
+    "steps": [
+      "Đứng chân rộng bằng vai, mũi chân hơi mở ra ngoài, tay đưa ra trước để giữ thăng bằng.",
+      "Đẩy hông ra sau, gập gối, hạ người đến khi đùi song song sàn hoặc thấp hơn nếu thoải mái.",
+      "Giữ ngực mở, gót chân bám sàn.",
+      "Đạp sàn để đứng lên."
+    ],
+    "commonMistakes": [
+      "Gót chân nhấc khỏi sàn.",
+      "Gối đổ vào trong — đẩy gối theo hướng mũi chân.",
+      "Gù lưng ở đáy."
+    ],
+    "tips": ["Hít vào khi hạ xuống, thở ra khi đứng lên."],
+    "contraindications": ["Đau gối cấp tính."],
+    "media": {
+      "frames": ["bodyweight-squat/0.webp", "bodyweight-squat/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Bodyweight Squat",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Bodyweight_Squat.json"
+      },
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "split-squat",
+    "nameVi": "Squat tách chân",
+    "nameEn": "Split Squat",
+    "primaryMuscles": ["legs"],
+    "secondaryMuscles": ["glutes"],
+    "measure": "reps_each_side",
+    "difficulty": 3,
+    "steps": [
+      "Đứng một chân trước một chân sau, cách nhau khoảng một bước dài.",
+      "Hạ thẳng người xuống đến khi gối sau gần chạm sàn.",
+      "Đạp chân trước để đứng lên, giữ nguyên vị trí chân.",
+      "Hoàn thành số lần rồi đổi chân."
+    ],
+    "commonMistakes": ["Gối trước đổ vào trong.", "Thân đổ về phía trước quá nhiều."],
+    "contraindications": ["Đau gối khi gập sâu."],
+    "media": {
+      "frames": ["split-squat/0.webp", "split-squat/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Split Squats",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Split_Squats.json"
+      }
+    ]
+  },
+  {
+    "id": "reverse-lunge",
+    "nameVi": "Lunge lùi",
+    "nameEn": "Reverse Lunge",
+    "primaryMuscles": ["legs"],
+    "secondaryMuscles": ["glutes", "core"],
+    "measure": "reps_each_side",
+    "difficulty": 4,
+    "steps": [
+      "Đứng thẳng, chân rộng bằng hông.",
+      "Bước một chân lùi ra sau và hạ người đến khi gối sau gần chạm sàn.",
+      "Đạp chân trước để kéo chân sau về vị trí ban đầu.",
+      "Đổi chân hoặc hoàn thành một bên trước."
+    ],
+    "commonMistakes": [
+      "Bước quá ngắn khiến gối trước vượt xa mũi chân.",
+      "Mất thăng bằng do đặt hai chân trên một đường thẳng."
+    ],
+    "contraindications": ["Đau gối khi gập sâu."],
+    "media": {
+      "frames": ["reverse-lunge/0.webp", "reverse-lunge/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "wger — Reverse lunges",
+        "url": "https://wger.de/en/exercise/999/view/"
+      }
+    ]
+  },
+  {
+    "id": "bulgarian-split-squat",
+    "nameVi": "Squat Bulgaria (chân sau trên ghế)",
+    "nameEn": "Bulgarian Split Squat",
+    "primaryMuscles": ["legs", "glutes"],
+    "secondaryMuscles": ["core"],
+    "household": ["chair"],
+    "measure": "reps_each_side",
+    "difficulty": 5,
+    "steps": [
+      "Đứng quay lưng về ghế, đặt mu bàn chân sau lên mặt ghế.",
+      "Chân trước bước ra xa khoảng một bước dài.",
+      "Hạ người đến khi đùi trước gần song song sàn.",
+      "Đạp chân trước để đứng lên; hoàn thành một bên rồi đổi chân."
+    ],
+    "commonMistakes": ["Đứng quá gần ghế.", "Đẩy bằng chân sau."],
+    "tips": ["Vịn tường bằng một tay nếu khó giữ thăng bằng."],
+    "contraindications": ["Đau gối hoặc hông."],
+    "media": {
+      "frames": ["bulgarian-split-squat/0.webp"]
+    },
+    "sources": [
+      {
+        "title": "wger — Bulgarian split squats",
+        "url": "https://wger.de/en/exercise/988/view/"
+      }
+    ]
+  },
+  {
+    "id": "pistol-squat",
+    "nameVi": "Squat một chân (pistol) có hỗ trợ",
+    "nameEn": "Assisted Pistol Squat",
+    "primaryMuscles": ["legs", "glutes"],
+    "secondaryMuscles": ["core"],
+    "household": ["door", "chair"],
+    "measure": "reps_each_side",
+    "difficulty": 8,
+    "steps": [
+      "Đứng một chân cạnh khung cửa, tay vịn nhẹ; chân kia duỗi ra trước.",
+      "Hạ người chậm trên một chân, có thể ngồi xuống ghế ở đáy khi mới tập.",
+      "Đứng lên bằng chân trụ, giảm dần lực tay theo thời gian."
+    ],
+    "commonMistakes": ["Gối chân trụ đổ vào trong.", "Rơi người ở đáy."],
+    "contraindications": ["Đau gối, cổ chân."],
+    "media": {
+      "frames": ["pistol-squat/0.webp"]
+    },
+    "sources": [
+      {
+        "title": "wger — Pistol Squat",
+        "url": "https://wger.de/en/exercise/456/view/"
+      }
+    ],
+    "tips": [
+      "Có thể cầm một vật nhẹ (chai nước, ba lô nhỏ) duỗi thẳng phía trước làm đối trọng để dễ giữ thăng bằng."
+    ]
+  },
+  {
+    "id": "glute-bridge",
+    "nameVi": "Nâng hông (glute bridge)",
+    "nameEn": "Glute Bridge",
+    "primaryMuscles": ["glutes"],
+    "secondaryMuscles": ["legs", "core"],
+    "measure": "reps",
+    "difficulty": 1,
+    "steps": [
+      "Nằm ngửa, gập gối, bàn chân đặt sàn rộng bằng hông, gót gần mông.",
+      "Siết mông, nâng hông lên đến khi vai, hông, gối thẳng hàng.",
+      "Giữ 1–2 giây ở đỉnh.",
+      "Hạ hông xuống từ từ."
+    ],
+    "commonMistakes": ["Ưỡn lưng dưới thay vì siết mông.", "Đẩy bằng mũi chân."],
+    "contraindications": ["Đau lưng dưới khi nâng hông — giảm biên độ."],
+    "media": {
+      "frames": ["glute-bridge/0.webp", "glute-bridge/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Butt Lift (Bridge)",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Butt_Lift_Bridge.json"
+      },
+      {
+        "title": "wger — Glute Bridge",
+        "url": "https://wger.de/en/exercise/265/view/"
+      }
+    ]
+  },
+  {
+    "id": "single-leg-glute-bridge",
+    "nameVi": "Nâng hông một chân",
+    "nameEn": "Single-leg Glute Bridge",
+    "primaryMuscles": ["glutes"],
+    "secondaryMuscles": ["legs", "core"],
+    "measure": "reps_each_side",
+    "difficulty": 3,
+    "steps": [
+      "Nằm ngửa, một chân gập đặt sàn, chân kia duỗi thẳng lên cao hoặc ôm gối vào ngực.",
+      "Đạp gót chân trụ, nâng hông lên đến khi thân thẳng.",
+      "Giữ hông cân bằng, không lệch sang bên.",
+      "Hạ xuống từ từ; hoàn thành một bên rồi đổi chân."
+    ],
+    "commonMistakes": ["Hông xoay lệch.", "Ưỡn lưng dưới."],
+    "contraindications": ["Đau lưng dưới."],
+    "media": {
+      "frames": ["single-leg-glute-bridge/0.webp", "single-leg-glute-bridge/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Single Leg Glute Bridge",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Single_Leg_Glute_Bridge.json"
+      }
+    ]
+  },
+  {
+    "id": "hip-thrust",
+    "nameVi": "Đẩy hông (vai tựa ghế)",
+    "nameEn": "Bodyweight Hip Thrust",
+    "primaryMuscles": ["glutes"],
+    "secondaryMuscles": ["legs"],
+    "household": ["chair"],
+    "measure": "reps",
+    "difficulty": 4,
+    "steps": [
+      "Ngồi trên sàn, lưng trên tựa vào mép ghế/sofa chắc chắn (kê sát tường).",
+      "Gập gối, bàn chân đặt sàn rộng bằng hông.",
+      "Siết mông, đẩy hông lên đến khi thân song song sàn.",
+      "Hạ hông xuống có kiểm soát."
+    ],
+    "commonMistakes": ["Ghế trượt về phía sau.", "Ngửa cổ ra sau thay vì nhìn về phía trước."],
+    "tips": ["Làm một chân để tăng độ khó khi đã dễ."],
+    "contraindications": ["Đau lưng dưới."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "nordic-curl",
+    "nameVi": "Nordic curl (gập đùi sau)",
+    "nameEn": "Nordic Hamstring Curl",
+    "primaryMuscles": ["legs"],
+    "secondaryMuscles": ["glutes"],
+    "household": ["chair"],
+    "measure": "reps",
+    "difficulty": 7,
+    "steps": [
+      "Quỳ trên thảm, cố định gót chân dưới sofa nặng hoặc nhờ người giữ.",
+      "Giữ thân thẳng từ gối đến đầu.",
+      "Ngả người về trước thật chậm, dùng đùi sau hãm lại càng lâu càng tốt.",
+      "Chống tay đỡ khi rơi, đẩy nhẹ để trở về."
+    ],
+    "commonMistakes": ["Gập hông thay vì giữ thân thẳng.", "Rơi tự do không hãm."],
+    "contraindications": ["Chấn thương đùi sau, đau gối khi quỳ."],
+    "media": {
+      "frames": ["nordic-curl/0.webp", "nordic-curl/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Natural Glute Ham Raise",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Natural_Glute_Ham_Raise.json"
+      }
+    ]
+  }
+]

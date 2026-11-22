@@ -1,0 +1,348 @@
+[
+  {
+    "id": "wall-push-up",
+    "nameVi": "Chống đẩy vào tường",
+    "nameEn": "Wall Push-up",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["arms", "shoulders"],
+    "household": ["wall"],
+    "measure": "reps",
+    "difficulty": 1,
+    "steps": [
+      "Đứng cách tường khoảng một cánh tay, đặt hai bàn tay lên tường ngang vai, rộng hơn vai một chút.",
+      "Giữ người thẳng từ đầu đến gót, siết bụng và mông.",
+      "Gập khuỷu tay, đưa ngực lại gần tường đến khi mũi gần chạm tường.",
+      "Đẩy tường để trở về tư thế ban đầu."
+    ],
+    "commonMistakes": [
+      "Võng lưng hoặc chổng mông thay vì giữ người thẳng.",
+      "Khuỷu tay bè ngang 90° — nên khép khoảng 45° so với thân."
+    ],
+    "tips": ["Lùi chân xa tường hơn để tăng độ khó."],
+    "contraindications": ["Đau cổ tay hoặc vai khi chống tay."],
+    "media": null,
+    "sources": [
+      {
+        "title": "NHS — Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/"
+      },
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "incline-push-up",
+    "nameVi": "Chống đẩy nghiêng (tay trên ghế/bàn)",
+    "nameEn": "Incline Push-up",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["arms", "shoulders", "core"],
+    "household": ["chair", "table"],
+    "measure": "reps",
+    "difficulty": 2,
+    "steps": [
+      "Đặt hai tay lên mép bàn hoặc ghế chắc chắn (kê sát tường), rộng hơn vai một chút.",
+      "Duỗi chân ra sau, người thẳng một đường từ đầu đến gót.",
+      "Hạ ngực xuống chạm mép bàn/ghế, khuỷu tay khép khoảng 45°.",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": [
+      "Dùng ghế có bánh xe hoặc dễ trượt.",
+      "Hạ không hết biên độ.",
+      "Hông võng xuống ở cuối hiệp khi đã mỏi."
+    ],
+    "tips": ["Bề mặt càng thấp thì càng khó — hạ dần độ cao trước khi chuyển sang chống đẩy gối."],
+    "contraindications": ["Đau cổ tay hoặc vai khi chống tay."],
+    "media": { "frames": ["incline-push-up/0.webp", "incline-push-up/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Incline Push-Up",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Incline_Push-Up.json"
+      },
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "knee-push-up",
+    "nameVi": "Chống đẩy gối",
+    "nameEn": "Knee Push-up",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["arms", "shoulders", "core"],
+    "measure": "reps",
+    "difficulty": 3,
+    "steps": [
+      "Quỳ trên thảm, hai tay chống sàn dưới vai, rộng hơn vai một chút.",
+      "Đưa hông về phía trước để thân thẳng một đường từ đầu đến gối.",
+      "Hạ ngực xuống gần sàn, khuỷu tay khép khoảng 45°.",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": [
+      "Chổng mông lên cao — hông phải thẳng hàng với vai và gối.",
+      "Cúi đầu xuống trước ngực."
+    ],
+    "tips": ["Kê khăn gấp dưới gối nếu sàn cứng."],
+    "contraindications": ["Đau gối khi quỳ — dùng chống đẩy nghiêng thay thế."],
+    "media": null,
+    "sources": [
+      {
+        "title": "NHS — Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/"
+      },
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "push-up",
+    "nameVi": "Chống đẩy",
+    "nameEn": "Push-up",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["arms", "shoulders", "core"],
+    "measure": "reps",
+    "difficulty": 4,
+    "steps": [
+      "Chống tay xuống sàn dưới vai, rộng hơn vai một chút, chân duỗi thẳng ra sau.",
+      "Siết bụng và mông để thân thẳng từ đầu đến gót.",
+      "Hạ người đến khi ngực cách sàn khoảng một nắm tay, khuỷu tay khép khoảng 45°.",
+      "Đẩy sàn để trở lên, duỗi thẳng tay ở đỉnh."
+    ],
+    "commonMistakes": [
+      "Võng lưng hoặc hông rơi xuống trước ngực.",
+      "Khuỷu tay bè ngang thành chữ T.",
+      "Chỉ hạ nửa chừng."
+    ],
+    "tips": ["Hít vào khi hạ xuống, thở ra khi đẩy lên."],
+    "contraindications": ["Đau cổ tay hoặc vai khi chống tay."],
+    "media": { "frames": ["push-up/0.webp", "push-up/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Pushups",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Pushups.json"
+      },
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "decline-push-up",
+    "nameVi": "Chống đẩy chân trên ghế",
+    "nameEn": "Decline Push-up",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["shoulders", "arms", "core"],
+    "household": ["chair"],
+    "measure": "reps",
+    "difficulty": 5,
+    "steps": [
+      "Đặt mũi chân lên ghế chắc chắn, hai tay chống sàn dưới vai.",
+      "Giữ thân thẳng, siết bụng.",
+      "Hạ ngực xuống gần sàn, khuỷu tay khép khoảng 45°.",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Hông gập lên thành chữ V.", "Đầu chúi xuống trước tay."],
+    "contraindications": ["Đau vai khi chống tay ở góc dốc."],
+    "media": { "frames": ["decline-push-up/0.webp", "decline-push-up/1.webp"] },
+    "sources": [
+      {
+        "title": "free-exercise-db — Decline Push-Up",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Decline_Push-Up.json"
+      }
+    ]
+  },
+  {
+    "id": "diamond-push-up",
+    "nameVi": "Chống đẩy tay hẹp (kim cương)",
+    "nameEn": "Diamond Push-up",
+    "primaryMuscles": ["arms", "chest"],
+    "secondaryMuscles": ["shoulders", "core"],
+    "measure": "reps",
+    "difficulty": 6,
+    "steps": [
+      "Chống tay dưới ngực, hai ngón cái và ngón trỏ chạm nhau tạo hình kim cương (hoặc đặt tay hẹp bằng vai).",
+      "Duỗi chân, giữ thân thẳng.",
+      "Hạ ngực xuống gần mu bàn tay, khuỷu tay ép sát thân.",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Khuỷu tay bè ra hai bên.", "Mất thẳng thân khi đã mỏi."],
+    "tips": ["Nếu đau cổ tay, đặt hai tay song song rộng bằng vai thay vì chụm."],
+    "contraindications": ["Đau khuỷu tay hoặc cổ tay."],
+    "media": {
+      "frames": ["diamond-push-up/0.webp", "diamond-push-up/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Push-Ups - Close Triceps Position",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Push-Ups_-_Close_Triceps_Position.json"
+      },
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "archer-push-up",
+    "nameVi": "Chống đẩy cung thủ",
+    "nameEn": "Archer Push-up",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["arms", "shoulders", "core"],
+    "measure": "reps_each_side",
+    "difficulty": 7,
+    "steps": [
+      "Chống tay rất rộng (gấp khoảng 2 lần vai), chân duỗi thẳng.",
+      "Hạ người lệch về một bên: tay bên đó gập, tay còn lại duỗi thẳng sang ngang làm trợ lực.",
+      "Đẩy lên về giữa rồi đổi bên."
+    ],
+    "commonMistakes": [
+      "Xoay hông theo hướng hạ người.",
+      "Tay duỗi gánh phần lớn sức nặng — tay gập phải làm chính."
+    ],
+    "contraindications": ["Đau vai."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "single-arm-push-up",
+    "nameVi": "Chống đẩy một tay",
+    "nameEn": "Single-arm Push-up",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["arms", "shoulders", "core"],
+    "measure": "reps_each_side",
+    "difficulty": 9,
+    "steps": [
+      "Dang chân rộng để giữ thăng bằng, một tay chống dưới ngực, tay kia đặt sau lưng.",
+      "Siết bụng, mông để thân không xoay.",
+      "Hạ người chậm xuống gần sàn rồi đẩy lên."
+    ],
+    "commonMistakes": [
+      "Xoay thân để mượn lực.",
+      "Tập khi chưa vững chống đẩy cung thủ — dễ chấn thương vai."
+    ],
+    "tips": ["Có thể bắt đầu với tay đặt trên bàn (nghiêng) rồi hạ dần độ cao."],
+    "contraindications": ["Đau vai, khuỷu tay hoặc cổ tay."],
+    "media": {
+      "frames": ["single-arm-push-up/0.webp", "single-arm-push-up/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Single-Arm Push-Up",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Single-Arm_Push-Up.json"
+      }
+    ]
+  },
+  {
+    "id": "pike-push-up",
+    "nameVi": "Chống đẩy chữ V ngược (pike)",
+    "nameEn": "Pike Push-up",
+    "primaryMuscles": ["shoulders"],
+    "secondaryMuscles": ["arms", "core"],
+    "measure": "reps",
+    "difficulty": 4,
+    "steps": [
+      "Từ tư thế chống đẩy, bước chân lại gần tay và đẩy hông lên cao tạo hình chữ V ngược.",
+      "Hạ đỉnh đầu xuống sàn ở phía trước hai bàn tay, khuỷu tay hướng ra sau.",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": [
+      "Hạ mặt xuống giữa hai tay thay vì phía trước — làm lực dồn sai lên vai.",
+      "Hông thấp, biến thành chống đẩy thường."
+    ],
+    "contraindications": ["Đau vai, huyết áp cao (tư thế chúc đầu)."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "elevated-pike-push-up",
+    "nameVi": "Chống đẩy pike chân trên ghế",
+    "nameEn": "Elevated Pike Push-up",
+    "primaryMuscles": ["shoulders"],
+    "secondaryMuscles": ["arms", "core"],
+    "household": ["chair"],
+    "measure": "reps",
+    "difficulty": 6,
+    "steps": [
+      "Đặt mũi chân hoặc đầu gối lên ghế, hai tay chống sàn, gập hông để thân trên gần thẳng đứng.",
+      "Hạ đỉnh đầu xuống sàn phía trước hai tay.",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Hông không ở trên vai.", "Hạ quá nhanh, đập đầu xuống sàn."],
+    "tips": ["Đặt gối gấp dưới đầu khi mới tập."],
+    "contraindications": ["Đau vai, huyết áp cao, vấn đề về mắt (tư thế chúc đầu)."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "wall-handstand-hold",
+    "nameVi": "Trồng chuối dựa tường (giữ)",
+    "nameEn": "Wall Handstand Hold",
+    "primaryMuscles": ["shoulders"],
+    "secondaryMuscles": ["arms", "core"],
+    "household": ["wall"],
+    "measure": "time",
+    "difficulty": 7,
+    "steps": [
+      "Quay lưng về tường, chống tay xuống sàn cách tường khoảng một gang tay.",
+      "Lần lượt bước chân lên tường (hoặc đá chân lên) đến khi người gần thẳng đứng.",
+      "Đẩy sàn, giữ tay thẳng, siết bụng, giữ trong thời gian mục tiêu.",
+      "Bước chân xuống từ từ."
+    ],
+    "commonMistakes": ["Võng lưng mạnh.", "Gập khuỷu tay, sụp vai."],
+    "tips": ["Tập ở nơi trống, không có đồ vật cứng xung quanh."],
+    "contraindications": ["Huyết áp cao, tăng nhãn áp, đau vai hoặc cổ tay."],
+    "media": null,
+    "sources": [
+      {
+        "title": "r/bodyweightfitness — Recommended Routine",
+        "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine/"
+      }
+    ]
+  },
+  {
+    "id": "wall-handstand-push-up",
+    "nameVi": "Chống đẩy trồng chuối dựa tường",
+    "nameEn": "Wall Handstand Push-up",
+    "primaryMuscles": ["shoulders"],
+    "secondaryMuscles": ["arms", "core"],
+    "household": ["wall"],
+    "measure": "reps",
+    "difficulty": 9,
+    "steps": [
+      "Vào tư thế trồng chuối dựa tường.",
+      "Gập khuỷu tay, hạ đỉnh đầu chậm xuống sàn (có thể đặt gối gấp).",
+      "Đẩy lên đến khi tay duỗi thẳng."
+    ],
+    "commonMistakes": ["Hạ không kiểm soát.", "Tập khi chưa giữ được trồng chuối 30 giây."],
+    "contraindications": ["Huyết áp cao, tăng nhãn áp, đau cổ, vai hoặc cổ tay."],
+    "media": {
+      "frames": ["wall-handstand-push-up/0.webp", "wall-handstand-push-up/1.webp"]
+    },
+    "sources": [
+      {
+        "title": "free-exercise-db — Handstand Push-Ups",
+        "url": "https://github.com/yuhonas/free-exercise-db/blob/main/exercises/Handstand_Push-Ups.json"
+      }
+    ]
+  }
+]

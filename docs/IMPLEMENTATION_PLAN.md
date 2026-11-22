@@ -86,7 +86,7 @@ src/
 └─ lib/utils.ts
 public/
 ├─ media/exercises/*.webp
-├─ media/ATTRIBUTION.json
+├─ media/exercises/<id>/<n>.webp   (ghi công: src/content/media-attribution.json)
 └─ sw.js
 scripts/
 ├─ fetch-media.ts            # Tải + tối ưu + ghi attribution
@@ -129,7 +129,7 @@ Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 | S1-1 Viết Zod schema theo SRS §6 (+ `sources[]`, `assistance`, `equipment` nhánh)                                           | FR-ADM-01, FR-PRG-03  |
 | S1-2 Biên soạn **6 thang biến thể** (xem §5) ≈ 40 bài, mô tả tiếng Việt, lỗi thường gặp, chống chỉ định, nguồn              | FR-EXL-01, 03, 04     |
 | S1-3 Chuyển 3 giai đoạn hiện có thành chương trình 12 tuần có cấu trúc, buổi A/B, tuần deload                               | FR-PRG-01, 02, 04     |
-| S1-4 Script `fetch-media.ts`: tải, resize ≤ 600px, WebP ≤ 150KB/khung, ghi `ATTRIBUTION.json`                               | FR-EXL-02, NFR-CNT-03 |
+| S1-4 Script `fetch-media.ts`: tải, resize ≤ 600px, WebP ≤ 150KB/khung, ghi `media-attribution.json`                         | FR-EXL-02, NFR-CNT-03 |
 | S1-5 Script `validate-content.ts` chạy ở `prebuild`: thiếu trường / media không tồn tại / thang tham chiếu sai → build fail | FR-ADM-02             |
 | S1-6 Trang Thư viện bài tập + chi tiết bài (ảnh 2 khung luân phiên, nguồn, giấy phép); xóa `workout-data.tsx`               | FR-EXL-02             |
 | S1-7 Tìm kiếm không dấu + lọc dụng cụ/nhóm cơ                                                                               | FR-EXL-05             |

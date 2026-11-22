@@ -1,0 +1,352 @@
+[
+  {
+    "id": "push-horizontal",
+    "nameVi": "Thang chống đẩy",
+    "descriptionVi": "Đẩy ngang: ngực, tay sau, vai trước.",
+    "steps": [
+      {
+        "exerciseId": "wall-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 15,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "incline-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "knee-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "decline-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "diamond-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 10,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "archer-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 8,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "single-arm-push-up"
+      }
+    ]
+  },
+  {
+    "id": "push-vertical",
+    "nameVi": "Thang đẩy vai",
+    "descriptionVi": "Đẩy dọc: vai và tay sau, hướng tới chống đẩy trồng chuối.",
+    "steps": [
+      {
+        "exerciseId": "pike-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 10,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "elevated-pike-push-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 10,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "wall-handstand-hold",
+        "advanceWhen": {
+          "sets": 3,
+          "seconds": 30,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "wall-handstand-push-up"
+      }
+    ]
+  },
+  {
+    "id": "row",
+    "nameVi": "Thang kéo ngang",
+    "descriptionVi": "Kéo ngang: lưng giữa, xô, tay trước. Không cần xà.",
+    "steps": [
+      {
+        "exerciseId": "towel-row",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "band-row",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 15,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "table-row-bent-knee",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "inverted-row"
+      }
+    ]
+  },
+  {
+    "id": "pull-vertical",
+    "nameVi": "Thang hít xà",
+    "descriptionVi": "Kéo dọc trên xà đơn, từ treo xà đến hít xà sấp tay.",
+    "steps": [
+      {
+        "exerciseId": "dead-hang",
+        "advanceWhen": {
+          "sets": 3,
+          "seconds": 30,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "scapular-pull-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 10,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "negative-pull-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 5,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "band-assisted-pull-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 8,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "chin-up",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 8,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "pull-up"
+      }
+    ]
+  },
+  {
+    "id": "squat",
+    "nameVi": "Thang squat",
+    "descriptionVi": "Chân trước, mông, thăng bằng.",
+    "steps": [
+      {
+        "exerciseId": "assisted-squat",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 15,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "bodyweight-squat",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 20,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "split-squat",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "reverse-lunge",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "bulgarian-split-squat",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "pistol-squat"
+      }
+    ]
+  },
+  {
+    "id": "hinge",
+    "nameVi": "Thang hông & đùi sau",
+    "descriptionVi": "Gập hông: mông, đùi sau, lưng dưới.",
+    "steps": [
+      {
+        "exerciseId": "glute-bridge",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 15,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "single-leg-glute-bridge",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "hip-thrust",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 15,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "nordic-curl"
+      }
+    ]
+  },
+  {
+    "id": "core",
+    "nameVi": "Thang bụng",
+    "descriptionVi": "Chống ưỡn lưng: bụng sâu và thẳng bụng.",
+    "steps": [
+      {
+        "exerciseId": "dead-bug",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 10,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "plank",
+        "advanceWhen": {
+          "sets": 3,
+          "seconds": 45,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "hollow-body-tuck",
+        "advanceWhen": {
+          "sets": 3,
+          "seconds": 30,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "hollow-body"
+      }
+    ]
+  },
+  {
+    "id": "core-hanging",
+    "nameVi": "Thang bụng trên xà",
+    "descriptionVi": "Nâng chân khi treo xà đơn.",
+    "steps": [
+      {
+        "exerciseId": "hanging-knee-raise",
+        "advanceWhen": {
+          "sets": 3,
+          "reps": 12,
+          "maxRpe": 7,
+          "sessions": 2
+        }
+      },
+      {
+        "exerciseId": "hanging-leg-raise"
+      }
+    ]
+  }
+]
