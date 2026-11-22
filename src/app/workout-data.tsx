@@ -39,7 +39,8 @@ export const phases: Phase[] = [
         target: "Lưng",
         reps: "3 hiệp x 10-12 reps",
         description: "Nằm dưới bàn, kéo ngực lên.",
-        illustration: "https://www.nerdfitness.com/blog/inverted-row-are-you-missing-out-on-this-great-exercise/",
+        illustration:
+          "https://www.nerdfitness.com/blog/inverted-row-are-you-missing-out-on-this-great-exercise/",
       },
       {
         name: "Pike Push-Up",
@@ -90,7 +91,8 @@ export const phases: Phase[] = [
         target: "Vai",
         reps: "3 hiệp x 10 reps mỗi bên",
         description: "Chống tay vào tường, chạm vai đối diện.",
-        illustration: "https://eat-move-save.extension.illinois.edu/move/exercise/wall-shoulder-taps",
+        illustration:
+          "https://eat-move-save.extension.illinois.edu/move/exercise/wall-shoulder-taps",
       },
       {
         name: "Bicycle Crunch",
@@ -125,7 +127,8 @@ export const phases: Phase[] = [
         target: "Lưng",
         reps: "3 hiệp x 10-12 reps",
         description: "Kéo người lên dưới bàn thấp.",
-        illustration: "https://www.tomsguide.com/wellness/fitness/pull-ups-for-beginners-how-to-do-australian-pull-ups-and-the-benefits-for-your-upper-body",
+        illustration:
+          "https://www.tomsguide.com/wellness/fitness/pull-ups-for-beginners-how-to-do-australian-pull-ups-and-the-benefits-for-your-upper-body",
       },
       {
         name: "Handstand Hold Against Wall",

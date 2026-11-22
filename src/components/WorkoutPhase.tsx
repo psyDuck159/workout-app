@@ -25,14 +25,16 @@ export default function WorkoutPhase({ phase }: WorkoutPhaseProps) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">{phase.title}</h1>
+    <div className="mx-auto max-w-2xl p-6">
+      <h1 className="mb-4 text-2xl font-bold">{phase.title}</h1>
       <p className="mb-6">Tập 3 ngày/tuần, 3 hiệp/bài, nghỉ 60-90s.</p>
       {phase.exercises.map((ex) => (
         <ExerciseCard key={ex.name} exercise={ex} onComplete={handleComplete} /> // Bây giờ truyền được
       ))}
       {/* Optional: Hiển thị progress */}
-      <div className="mt-4">Hoàn thành: {completedExercises.size}/{phase.exercises.length}</div>
+      <div className="mt-4">
+        Hoàn thành: {completedExercises.size}/{phase.exercises.length}
+      </div>
     </div>
   );
 }

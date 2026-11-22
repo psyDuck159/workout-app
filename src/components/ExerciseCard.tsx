@@ -19,22 +19,24 @@ export default function ExerciseCard({ exercise, onComplete }: ExerciseCardProps
   };
 
   return (
-    <div className="border rounded-lg p-4 mb-4 bg-white shadow-md">
-      <h3 className="font-bold text-lg">{exercise.name}</h3>
+    <div className="mb-4 rounded-lg border bg-white p-4 shadow-md">
+      <h3 className="text-lg font-bold">{exercise.name}</h3>
       <p className="text-sm text-gray-600">{exercise.target}</p>
       <p className="text-sm">{exercise.reps}</p>
-      <p className="text-xs mt-2">{exercise.description}</p>
-      <div className="flex items-center space-x-2 mt-2">
+      <p className="mt-2 text-xs">{exercise.description}</p>
+      <div className="mt-2 flex items-center space-x-2">
         <Checkbox id={exercise.name} checked={checked} onCheckedChange={handleChange} />
-        <Label htmlFor={exercise.name} className="text-sm">Hoàn thành</Label>
+        <Label htmlFor={exercise.name} className="text-sm">
+          Hoàn thành
+        </Label>
       </div>
-      <a 
-        href={exercise.illustration} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="text-blue-500 flex items-center mt-2 text-sm"
+      <a
+        href={exercise.illustration}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2 flex items-center text-sm text-blue-500"
       >
-        Xem minh họa <ExternalLink className="ml-1 w-4 h-4" />
+        Xem minh họa <ExternalLink className="ml-1 h-4 w-4" />
       </a>
     </div>
   );

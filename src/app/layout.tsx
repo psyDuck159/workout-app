@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   description: "Theo dõi lịch trình workout",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi">
       <body className={inter.className}>{children}</body>

@@ -6,10 +6,10 @@ export default function PhaseSelector() {
   const router = useRouter();
 
   return (
-    <div className="flex justify-center mb-8">
-      <select 
+    <div className="mb-8 flex justify-center">
+      <select
         onChange={(e) => router.push(`/phase/${e.target.value}`)}
-        className="p-2 border rounded"
+        className="rounded border p-2"
         defaultValue=""
       >
         <option value="">Chọn giai đoạn</option>
