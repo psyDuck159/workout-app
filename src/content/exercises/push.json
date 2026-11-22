@@ -20,7 +20,9 @@
     ],
     "tips": ["Lùi chân xa tường hơn để tăng độ khó."],
     "contraindications": ["Đau cổ tay hoặc vai khi chống tay."],
-    "media": null,
+    "media": {
+      "frames": ["wall-push-up/0.svg", "wall-push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "NHS — Strength exercises",
@@ -54,7 +56,9 @@
     ],
     "tips": ["Bề mặt càng thấp thì càng khó — hạ dần độ cao trước khi chuyển sang chống đẩy gối."],
     "contraindications": ["Đau cổ tay hoặc vai khi chống tay."],
-    "media": { "frames": ["incline-push-up/0.webp", "incline-push-up/1.webp"] },
+    "media": {
+      "frames": ["incline-push-up/0.svg", "incline-push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Incline Push-Up",
@@ -86,7 +90,9 @@
     ],
     "tips": ["Kê khăn gấp dưới gối nếu sàn cứng."],
     "contraindications": ["Đau gối khi quỳ — dùng chống đẩy nghiêng thay thế."],
-    "media": null,
+    "media": {
+      "frames": ["knee-push-up/0.svg", "knee-push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "NHS — Strength exercises",
@@ -119,7 +125,9 @@
     ],
     "tips": ["Hít vào khi hạ xuống, thở ra khi đẩy lên."],
     "contraindications": ["Đau cổ tay hoặc vai khi chống tay."],
-    "media": { "frames": ["push-up/0.webp", "push-up/1.webp"] },
+    "media": {
+      "frames": ["push-up/0.svg", "push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Pushups",
@@ -148,7 +156,9 @@
     ],
     "commonMistakes": ["Hông gập lên thành chữ V.", "Đầu chúi xuống trước tay."],
     "contraindications": ["Đau vai khi chống tay ở góc dốc."],
-    "media": { "frames": ["decline-push-up/0.webp", "decline-push-up/1.webp"] },
+    "media": {
+      "frames": ["decline-push-up/0.svg", "decline-push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Decline Push-Up",
@@ -174,7 +184,7 @@
     "tips": ["Nếu đau cổ tay, đặt hai tay song song rộng bằng vai thay vì chụm."],
     "contraindications": ["Đau khuỷu tay hoặc cổ tay."],
     "media": {
-      "frames": ["diamond-push-up/0.webp", "diamond-push-up/1.webp"]
+      "frames": ["diamond-push-up/0.svg", "diamond-push-up/1.svg"]
     },
     "sources": [
       {
@@ -205,7 +215,9 @@
       "Tay duỗi gánh phần lớn sức nặng — tay gập phải làm chính."
     ],
     "contraindications": ["Đau vai."],
-    "media": null,
+    "media": {
+      "frames": ["archer-push-up/0.svg", "archer-push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -233,7 +245,7 @@
     "tips": ["Có thể bắt đầu với tay đặt trên bàn (nghiêng) rồi hạ dần độ cao."],
     "contraindications": ["Đau vai, khuỷu tay hoặc cổ tay."],
     "media": {
-      "frames": ["single-arm-push-up/0.webp", "single-arm-push-up/1.webp"]
+      "frames": ["single-arm-push-up/0.svg", "single-arm-push-up/1.svg"]
     },
     "sources": [
       {
@@ -260,7 +272,9 @@
       "Hông thấp, biến thành chống đẩy thường."
     ],
     "contraindications": ["Đau vai, huyết áp cao (tư thế chúc đầu)."],
-    "media": null,
+    "media": {
+      "frames": ["pike-push-up/0.svg", "pike-push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -285,7 +299,9 @@
     "commonMistakes": ["Hông không ở trên vai.", "Hạ quá nhanh, đập đầu xuống sàn."],
     "tips": ["Đặt gối gấp dưới đầu khi mới tập."],
     "contraindications": ["Đau vai, huyết áp cao, vấn đề về mắt (tư thế chúc đầu)."],
-    "media": null,
+    "media": {
+      "frames": ["elevated-pike-push-up/0.svg", "elevated-pike-push-up/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -311,7 +327,9 @@
     "commonMistakes": ["Võng lưng mạnh.", "Gập khuỷu tay, sụp vai."],
     "tips": ["Tập ở nơi trống, không có đồ vật cứng xung quanh."],
     "contraindications": ["Huyết áp cao, tăng nhãn áp, đau vai hoặc cổ tay."],
-    "media": null,
+    "media": {
+      "frames": ["wall-handstand-hold/0.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -336,7 +354,7 @@
     "commonMistakes": ["Hạ không kiểm soát.", "Tập khi chưa giữ được trồng chuối 30 giây."],
     "contraindications": ["Huyết áp cao, tăng nhãn áp, đau cổ, vai hoặc cổ tay."],
     "media": {
-      "frames": ["wall-handstand-push-up/0.webp", "wall-handstand-push-up/1.webp"]
+      "frames": ["wall-handstand-push-up/0.svg", "wall-handstand-push-up/1.svg"]
     },
     "sources": [
       {

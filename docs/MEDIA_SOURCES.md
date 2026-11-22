@@ -4,6 +4,16 @@ Ngày kiểm tra: 22/11/2026. Kiểm tra trực tiếp qua GitHub API và wger R
 
 > Đây là đánh giá kỹ thuật về giấy phép, không phải tư vấn pháp lý.
 
+## Quyết định hiện hành (22/11/2026, sau Sprint 1)
+
+**Toàn bộ ảnh bên thứ ba đã được gỡ.** Ảnh free-exercise-db có dấu hiệu là ảnh thương mại (xem mục 1) và một số ảnh wger cũng không rõ nguồn gốc, nên ứng dụng dùng **hình người que SVG tự sinh** cho cả 44 bài:
+
+- Tư thế khai báo trong `scripts/illustrations/poses.ts`, dựng hình bằng `scripts/illustrations/skeleton.ts` (IK 2 đoạn để tay chân chạm đúng sàn/xà/ghế).
+- Sinh lại bằng `npm run generate:illustrations` — cập nhật `media.frames` và `src/content/media-attribution.json`.
+- Không phụ thuộc giấy phép bên ngoài; mỗi file ~4 KB; tự đổi màu theo chế độ sáng/tối của hệ điều hành.
+
+Các mục bên dưới giữ lại làm hồ sơ kiểm tra, phòng khi sau này muốn bổ sung ảnh chụp thật.
+
 ## Tóm tắt
 
 | Nguồn                                                   | Giấy phép                                                                | Dùng được?          | Ghi chú                                                             |

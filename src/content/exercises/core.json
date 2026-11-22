@@ -14,7 +14,9 @@
     ],
     "commonMistakes": ["Lưng dưới bật khỏi sàn.", "Làm quá nhanh."],
     "tips": ["Thở ra khi duỗi tay chân."],
-    "media": { "frames": ["dead-bug/0.webp", "dead-bug/1.webp"] },
+    "media": {
+      "frames": ["dead-bug/0.svg", "dead-bug/1.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Dead Bug",
@@ -37,7 +39,9 @@
     ],
     "commonMistakes": ["Hông võng hoặc chổng cao.", "Nín thở."],
     "tips": ["Quỳ gối nếu chưa giữ được 20 giây với chân thẳng."],
-    "media": { "frames": ["plank/0.webp", "plank/1.webp"] },
+    "media": {
+      "frames": ["plank/0.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Plank",
@@ -62,7 +66,9 @@
       "Giữ tư thế, lưng dưới luôn chạm sàn."
     ],
     "commonMistakes": ["Lưng dưới bật khỏi sàn.", "Gập cổ quá mức."],
-    "media": null,
+    "media": {
+      "frames": ["hollow-body-tuck/0.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -83,7 +89,9 @@
       "Giữ thân cong như chiếc thuyền, lưng dưới chạm sàn."
     ],
     "commonMistakes": ["Lưng dưới bật khỏi sàn — nâng chân cao hơn để dễ hơn."],
-    "media": null,
+    "media": {
+      "frames": ["hollow-body/0.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -107,7 +115,9 @@
     "commonMistakes": ["Hông rơi xuống.", "Xoay thân về phía trước."],
     "tips": ["Co gối dưới để dễ hơn."],
     "contraindications": ["Đau vai bên chống."],
-    "media": { "frames": ["side-plank/0.webp", "side-plank/1.webp"] },
+    "media": {
+      "frames": ["side-plank/0.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Side Bridge",
@@ -131,7 +141,9 @@
     ],
     "commonMistakes": ["Đung đưa người để lấy đà."],
     "contraindications": ["Chấn thương vai."],
-    "media": null,
+    "media": {
+      "frames": ["hanging-knee-raise/0.svg", "hanging-knee-raise/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -156,7 +168,7 @@
     "commonMistakes": ["Đung đưa.", "Gập gối giữa chừng."],
     "contraindications": ["Chấn thương vai, đau lưng dưới."],
     "media": {
-      "frames": ["hanging-leg-raise/0.webp", "hanging-leg-raise/1.webp"]
+      "frames": ["hanging-leg-raise/0.svg", "hanging-leg-raise/1.svg"]
     },
     "sources": [
       {

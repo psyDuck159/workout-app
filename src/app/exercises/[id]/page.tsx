@@ -44,17 +44,26 @@ function Section({ title, items, ordered }: { title: string; items: string[]; or
   );
 }
 
+function ExternalText({ href, children }: { href: string | null; children: React.ReactNode }) {
+  if (!href) return <>{children}</>;
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="underline">
+      {children}
+    </a>
+  );
+}
+
 export default async function ExercisePage({ params }: Props) {
   const exercise = getExercise((await params).id);
   if (!exercise) notFound();
 
   const frames = exercise.media?.frames ?? [];
   const ladderInfo = findLadderOf(exercise.id);
-  // Các khung hình của một bài thường chung nguồn — gộp theo sourceUrl.
+  // Các khung hình của một bài thường chung nguồn — gộp theo nguồn.
   const credits = new Map<string, Attribution>();
   for (const frame of frames) {
     const credit = mediaAttribution[frame];
-    if (credit) credits.set(credit.sourceUrl, credit);
+    if (credit) credits.set(credit.sourceUrl ?? credit.source, credit);
   }
   const equipment = [
     ...exercise.equipment.map((g) => gearLabels[g]),
@@ -148,26 +157,11 @@ export default async function ExercisePage({ params }: Props) {
           <div>
             <p className="font-medium">Ảnh minh họa</p>
             <ul className="list-disc pl-5">
-              {[...credits.values()].map((c) => (
-                <li key={c.sourceUrl}>
-                  <a
-                    href={c.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    {c.source}
-                  </a>
+              {[...credits.entries()].map(([key, c]) => (
+                <li key={key}>
+                  <ExternalText href={c.sourceUrl}>{c.source}</ExternalText>
                   {c.author && ` — ${c.author}`} ·{" "}
-                  <a
-                    href={c.licenseUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    {c.license}
-                  </a>{" "}
-                  · {c.modified}
+                  <ExternalText href={c.licenseUrl}>{c.license}</ExternalText> · {c.modified}
                 </li>
               ))}
             </ul>

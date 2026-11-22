@@ -17,7 +17,9 @@
     "commonMistakes": ["Kéo bằng tay thay vì đứng lên bằng chân.", "Gối đổ vào trong."],
     "tips": ["Đặt ghế phía sau và chạm mông vào ghế để biết độ sâu."],
     "contraindications": ["Đau gối cấp tính."],
-    "media": null,
+    "media": {
+      "frames": ["assisted-squat/0.svg", "assisted-squat/1.svg"]
+    },
     "sources": [
       {
         "title": "NHS — Strength exercises",
@@ -47,7 +49,7 @@
     "tips": ["Hít vào khi hạ xuống, thở ra khi đứng lên."],
     "contraindications": ["Đau gối cấp tính."],
     "media": {
-      "frames": ["bodyweight-squat/0.webp", "bodyweight-squat/1.webp"]
+      "frames": ["bodyweight-squat/0.svg", "bodyweight-squat/1.svg"]
     },
     "sources": [
       {
@@ -77,7 +79,7 @@
     "commonMistakes": ["Gối trước đổ vào trong.", "Thân đổ về phía trước quá nhiều."],
     "contraindications": ["Đau gối khi gập sâu."],
     "media": {
-      "frames": ["split-squat/0.webp", "split-squat/1.webp"]
+      "frames": ["split-squat/0.svg", "split-squat/1.svg"]
     },
     "sources": [
       {
@@ -106,7 +108,7 @@
     ],
     "contraindications": ["Đau gối khi gập sâu."],
     "media": {
-      "frames": ["reverse-lunge/0.webp", "reverse-lunge/1.webp"]
+      "frames": ["reverse-lunge/0.svg", "reverse-lunge/1.svg"]
     },
     "sources": [
       {
@@ -134,7 +136,7 @@
     "tips": ["Vịn tường bằng một tay nếu khó giữ thăng bằng."],
     "contraindications": ["Đau gối hoặc hông."],
     "media": {
-      "frames": ["bulgarian-split-squat/0.webp"]
+      "frames": ["bulgarian-split-squat/0.svg", "bulgarian-split-squat/1.svg"]
     },
     "sources": [
       {
@@ -160,7 +162,7 @@
     "commonMistakes": ["Gối chân trụ đổ vào trong.", "Rơi người ở đáy."],
     "contraindications": ["Đau gối, cổ chân."],
     "media": {
-      "frames": ["pistol-squat/0.webp"]
+      "frames": ["pistol-squat/0.svg", "pistol-squat/1.svg"]
     },
     "sources": [
       {
@@ -189,7 +191,7 @@
     "commonMistakes": ["Ưỡn lưng dưới thay vì siết mông.", "Đẩy bằng mũi chân."],
     "contraindications": ["Đau lưng dưới khi nâng hông — giảm biên độ."],
     "media": {
-      "frames": ["glute-bridge/0.webp", "glute-bridge/1.webp"]
+      "frames": ["glute-bridge/0.svg", "glute-bridge/1.svg"]
     },
     "sources": [
       {
@@ -219,7 +221,7 @@
     "commonMistakes": ["Hông xoay lệch.", "Ưỡn lưng dưới."],
     "contraindications": ["Đau lưng dưới."],
     "media": {
-      "frames": ["single-leg-glute-bridge/0.webp", "single-leg-glute-bridge/1.webp"]
+      "frames": ["single-leg-glute-bridge/0.svg", "single-leg-glute-bridge/1.svg"]
     },
     "sources": [
       {
@@ -246,7 +248,9 @@
     "commonMistakes": ["Ghế trượt về phía sau.", "Ngửa cổ ra sau thay vì nhìn về phía trước."],
     "tips": ["Làm một chân để tăng độ khó khi đã dễ."],
     "contraindications": ["Đau lưng dưới."],
-    "media": null,
+    "media": {
+      "frames": ["hip-thrust/0.svg", "hip-thrust/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -272,7 +276,7 @@
     "commonMistakes": ["Gập hông thay vì giữ thân thẳng.", "Rơi tự do không hãm."],
     "contraindications": ["Chấn thương đùi sau, đau gối khi quỳ."],
     "media": {
-      "frames": ["nordic-curl/0.webp", "nordic-curl/1.webp"]
+      "frames": ["nordic-curl/0.svg", "nordic-curl/1.svg"]
     },
     "sources": [
       {

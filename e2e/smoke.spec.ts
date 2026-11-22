@@ -27,7 +27,7 @@ test("thư viện tìm không dấu và mở chi tiết bài tập", async ({ pa
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Chống đẩy tay hẹp (kim cương)");
   await expect(page.getByRole("heading", { name: "Cách thực hiện" })).toBeVisible();
   await expect(page.getByAltText("Minh họa Chống đẩy tay hẹp (kim cương)")).toBeVisible();
-  await expect(page.getByText("Unlicense")).toBeVisible();
+  await expect(page.getByText("workout-app (tự vẽ)")).toBeVisible();
 });
 
 test("trang không tồn tại trả về 404", async ({ page }) => {

@@ -20,7 +20,9 @@
     ],
     "tips": ["Chân càng gần cửa, người càng ngả nhiều thì càng khó."],
     "contraindications": ["Cửa hoặc tay nắm không chắc chắn — không tập."],
-    "media": null,
+    "media": {
+      "frames": ["towel-row/0.svg", "towel-row/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -47,7 +49,9 @@
     "commonMistakes": ["Nhún vai lên tai.", "Ngả người ra sau để kéo."],
     "tips": ["Lùi xa hơn hoặc dùng dây nặng hơn để tăng độ khó."],
     "contraindications": ["Dây bị nứt, sờn — thay dây mới."],
-    "media": null,
+    "media": {
+      "frames": ["band-row/0.svg", "band-row/1.svg"]
+    },
     "sources": [
       {
         "title": "NHS — Strength exercises",
@@ -75,7 +79,9 @@
       "Hông rơi xuống khi kéo."
     ],
     "contraindications": ["Bàn không chịu được trọng lượng cơ thể — không tập."],
-    "media": null,
+    "media": {
+      "frames": ["table-row-bent-knee/0.svg", "table-row-bent-knee/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -101,7 +107,9 @@
     "commonMistakes": ["Hông võng.", "Kéo cằm lên thay vì kéo ngực."],
     "tips": ["Kê chân lên ghế để tăng độ khó."],
     "contraindications": ["Bàn không chịu được trọng lượng cơ thể — không tập."],
-    "media": { "frames": ["inverted-row/0.webp", "inverted-row/1.webp"] },
+    "media": {
+      "frames": ["inverted-row/0.svg", "inverted-row/1.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Inverted Row",
@@ -131,7 +139,9 @@
     "commonMistakes": ["Buông tay đột ngột.", "Đung đưa người."],
     "tips": ["Kiểm tra xà đã lắp chắc trước mỗi buổi tập."],
     "contraindications": ["Chấn thương vai, khuỷu tay hoặc cổ tay."],
-    "media": null,
+    "media": {
+      "frames": ["dead-hang/0.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -156,7 +166,7 @@
     "commonMistakes": ["Gập khuỷu tay.", "Thả rơi bả vai thay vì hạ có kiểm soát."],
     "contraindications": ["Chấn thương vai."],
     "media": {
-      "frames": ["scapular-pull-up/0.webp", "scapular-pull-up/1.webp"]
+      "frames": ["scapular-pull-up/0.svg", "scapular-pull-up/1.svg"]
     },
     "sources": [
       {
@@ -183,7 +193,9 @@
     ],
     "commonMistakes": ["Rơi nhanh ở nửa dưới.", "Nhảy từ ghế lên gây giật vai."],
     "contraindications": ["Chấn thương vai hoặc khuỷu tay."],
-    "media": null,
+    "media": {
+      "frames": ["negative-pull-up/0.svg", "negative-pull-up/1.svg"]
+    },
     "sources": [
       {
         "title": "r/bodyweightfitness — Recommended Routine",
@@ -210,7 +222,7 @@
     "tips": ["Chuyển dần sang dây nhẹ hơn trước khi tập hít xà không hỗ trợ."],
     "contraindications": ["Dây bị nứt, sờn — thay dây mới."],
     "media": {
-      "frames": ["band-assisted-pull-up/0.webp", "band-assisted-pull-up/1.webp"]
+      "frames": ["band-assisted-pull-up/0.svg", "band-assisted-pull-up/1.svg"]
     },
     "sources": [
       {
@@ -236,7 +248,9 @@
     ],
     "commonMistakes": ["Đung đưa, đá chân để mượn lực.", "Không duỗi hết tay ở đáy."],
     "contraindications": ["Đau khuỷu tay hoặc vai."],
-    "media": { "frames": ["chin-up/0.webp", "chin-up/1.webp"] },
+    "media": {
+      "frames": ["chin-up/0.svg", "chin-up/1.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Chin-Up",
@@ -261,7 +275,9 @@
     ],
     "commonMistakes": ["Kipping (đá người) khi chưa có nền tảng.", "Chỉ kéo nửa biên độ."],
     "contraindications": ["Đau khuỷu tay hoặc vai."],
-    "media": { "frames": ["pull-up/0.webp", "pull-up/1.webp"] },
+    "media": {
+      "frames": ["pull-up/0.svg", "pull-up/1.svg"]
+    },
     "sources": [
       {
         "title": "free-exercise-db — Pullups",

@@ -120,7 +120,7 @@ export default function ExerciseBrowser({ exercises }: { exercises: ExerciseSumm
                   src={e.thumbnail}
                   alt=""
                   loading="lazy"
-                  className="bg-muted size-16 shrink-0 rounded-md object-cover"
+                  className="bg-muted size-16 shrink-0 rounded-md object-contain"
                 />
               ) : (
                 <div className="bg-muted size-16 shrink-0 rounded-md" aria-hidden />

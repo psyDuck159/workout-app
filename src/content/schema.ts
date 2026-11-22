@@ -49,7 +49,7 @@ export const Exercise = z.object({
   contraindications: z.array(z.string().min(1)).default([]),
   /** Đường dẫn tương đối trong `public/media/exercises/`. `null` = chưa có ảnh hợp lệ. */
   media: z
-    .object({ frames: z.array(z.string().regex(/^[a-z0-9-]+\/\d+\.webp$/)).min(1) })
+    .object({ frames: z.array(z.string().regex(/^[a-z0-9-]+\/\d+\.(svg|webp)$/)).min(1) })
     .nullable(),
   sources: z.array(Source).min(1),
 });
@@ -142,9 +142,9 @@ export type Program = z.infer<typeof Program>;
 
 export const Attribution = z.object({
   source: z.string().min(1),
-  sourceUrl: z.url(),
+  sourceUrl: z.url().nullable(),
   license: z.string().min(1),
-  licenseUrl: z.url(),
+  licenseUrl: z.url().nullable(),
   author: z.string().min(1).nullable(),
   modified: z.string().min(1),
 });
