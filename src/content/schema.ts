@@ -41,6 +41,8 @@ export const Exercise = z.object({
   secondaryMuscles: z.array(MuscleGroup).default([]),
   equipment: z.array(Gear).default([]),
   household: z.array(HouseholdItem).default([]),
+  /** Bài có hỗ trợ bằng dây kháng lực: khi ghi hiệp cho chọn mức dây. */
+  assistance: z.literal("band").optional(),
   measure: MeasureType,
   difficulty: z.number().int().min(1).max(10),
   steps: z.array(z.string().min(1)).min(2),

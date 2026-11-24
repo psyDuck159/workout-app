@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import { getDb } from "./db";
 import { createRepositories, type Repositories } from "./repositories";
-import type { LadderState, Settings, UserProfile } from "./types";
+import type { LadderState, SetLog, Settings, UserProfile, WorkoutSession } from "./types";
 import { defaultSettings } from "@/domain/profile";
 
 type QueryResult<T> = { ok: true; value: T } | { ok: false; error: unknown };
@@ -46,5 +46,26 @@ export function useSettings(): DbQuery<Settings> {
 export function useLadderStates(): DbQuery<Map<string, LadderState>> {
   return useDbQuery(
     async () => new Map((await getDb().ladderStates.toArray()).map((s) => [s.ladderId, s])),
+  );
+}
+
+/** Buổi đang tập dở; `data` là `null` nếu không có. */
+export function useActiveSession(): DbQuery<WorkoutSession | null> {
+  return useDbQuery(
+    async () => (await getDb().sessions.where("status").equals("in_progress").first()) ?? null,
+  );
+}
+
+export function useSessionSets(sessionId: string | undefined): DbQuery<SetLog[]> {
+  return useDbQuery(
+    async () => (sessionId ? getDb().sets.where({ sessionId }).sortBy("completedAt") : []),
+    [sessionId],
+  );
+}
+
+export function useSession(sessionId: string | undefined): DbQuery<WorkoutSession | null> {
+  return useDbQuery(
+    async () => (sessionId ? ((await getDb().sessions.get(sessionId)) ?? null) : null),
+    [sessionId],
   );
 }

@@ -44,6 +44,8 @@ export default async function PhasePage({ params }: Props) {
       </header>
 
       <PhaseSessions
+        programId={defaultProgram.id}
+        phaseId={phase.id}
         sessions={phase.sessions}
         ladders={ladders}
         exercises={exercises.map(({ id, nameVi, equipment, measure }) => ({
