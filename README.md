@@ -70,3 +70,7 @@ Next.js 15 · React 19 · TypeScript · Tailwind CSS 4 · shadcn/ui · Zod · Vi
 - [Đặc tả yêu cầu (SRS)](docs/SRS.md) — khảo sát thị trường, pain point, yêu cầu chức năng/phi chức năng
 - [Kế hoạch triển khai](docs/IMPLEMENTATION_PLAN.md)
 - [Nguồn media](docs/MEDIA_SOURCES.md)
+
+## Giấy phép
+
+[MIT](LICENSE) © 2026 Le Dac Anh — áp dụng cho toàn bộ repo, gồm code, nội dung bài tập và hình minh họa.

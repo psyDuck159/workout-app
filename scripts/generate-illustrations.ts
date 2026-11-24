@@ -19,8 +19,8 @@ const ATTRIBUTION_FILE = path.join(ROOT, "src/content/media-attribution.json");
 const credit: Attribution = {
   source: "workout-app (tự vẽ)",
   sourceUrl: null,
-  license: "Thuộc dự án",
-  licenseUrl: null,
+  license: "MIT",
+  licenseUrl: "https://opensource.org/license/mit",
   author: null,
   modified: "Sinh tự động từ tư thế khớp xương (scripts/generate-illustrations.ts)",
 };
