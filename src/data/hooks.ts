@@ -4,7 +4,14 @@ import { useMemo } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import { getDb } from "./db";
 import { createRepositories, type Repositories } from "./repositories";
-import type { LadderState, SetLog, Settings, UserProfile, WorkoutSession } from "./types";
+import type {
+  LadderState,
+  SetLog,
+  Settings,
+  Suggestion,
+  UserProfile,
+  WorkoutSession,
+} from "./types";
 import { defaultSettings } from "@/domain/profile";
 
 type QueryResult<T> = { ok: true; value: T } | { ok: false; error: unknown };
@@ -68,4 +75,20 @@ export function useSession(sessionId: string | undefined): DbQuery<WorkoutSessio
     async () => (sessionId ? ((await getDb().sessions.get(sessionId)) ?? null) : null),
     [sessionId],
   );
+}
+
+export function useCompletedSessions(): DbQuery<WorkoutSession[]> {
+  return useDbQuery(async () =>
+    (await getDb().sessions.where("status").equals("completed").toArray()).filter(
+      (s) => !s.deletedAt,
+    ),
+  );
+}
+
+export function usePendingSuggestions(): DbQuery<Suggestion[]> {
+  return useDbQuery(() => createRepositories(getDb).getPendingSuggestions());
+}
+
+export function useHistory(): DbQuery<WorkoutSession[]> {
+  return useDbQuery(() => createRepositories(getDb).listHistory());
 }

@@ -119,7 +119,14 @@ function ActivePlayer({
         const next = reducePlayer(session.player, session.plan, event);
         if (write) await write(next);
         if (next.phase.kind === "done") {
-          await repos.completeSession(session.id, next);
+          await repos.completeSession(session.id, next, {
+            ladders,
+            exercises: [...exercisesById.values()].map((e) => ({
+              id: e.id,
+              equipment: e.equipment,
+            })),
+            gear: profile?.gear ?? [],
+          });
           onFinished(session.id);
         } else if (!write) {
           await repos.updatePlayer(session.id, next);
@@ -130,7 +137,7 @@ function ActivePlayer({
         setBusy(false);
       }
     },
-    [repos, session, onFinished],
+    [repos, session, onFinished, ladders, exercisesById, profile?.gear],
   );
 
   // Hết giờ nghỉ: báo và tự sang hiệp tiếp theo (chỉ một lần cho mỗi mốc).
@@ -172,7 +179,13 @@ function ActivePlayer({
       : undefined;
     const reason = `Bạn báo đau/khó chịu khi tập ${exercise.nameVi}.`;
     void run({ type: "reportPain" }, (next) =>
-      repos.reportPain(session.id, next, item.exerciseId, reason),
+      repos.reportPain(
+        session.id,
+        next,
+        item.exerciseId,
+        reason,
+        ladder && easier ? { ladderId: ladder.id, toExerciseId: easier.id } : undefined,
+      ),
     );
     setPainAdvice({ name: exercise.nameVi, easier: easier?.nameVi });
   }

@@ -80,7 +80,7 @@ describe("buổi tập", () => {
     await repos.completeSession(session.id, { ...rated, phase: { kind: "done" } });
 
     const sets = await repos.getSessionSets(session.id);
-    expect(sets.map((s) => s.rpe)).toEqual([undefined, 10]);
+    expect(sets.map((s) => s.rpe)).toEqual([undefined, 9]);
     const stored = await db.sessions.get(session.id);
     expect(stored?.status).toBe("completed");
     expect(stored?.endedAt).toBeDefined();

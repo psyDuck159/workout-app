@@ -13,8 +13,11 @@
 - **Thiết lập lộ trình** 4 bước, bỏ qua được (mục tiêu, lịch tập, dụng cụ, sàng lọc sức khỏe) — không cần tài khoản; dữ liệu lưu trên thiết bị (IndexedDB).
 - **Cài đặt**: đổi dụng cụ là chương trình tự chọn lại bài phù hợp; tùy chọn âm báo, rung, giữ màn hình sáng.
 - **Màn hình đang tập**: ghi một hiệp bằng một chạm (số điền sẵn theo lần trước), bài giữ theo thời gian có đếm ngược 3-2-1, timer nghỉ vẫn đúng khi tắt màn hình, đánh giá Dễ/Vừa/Khó, nút "Đau / khó chịu", tóm tắt cuối buổi với kỷ lục mới. Tải lại hay đóng app giữa chừng vẫn tiếp tục đúng chỗ.
+- **Hôm nay**: buổi tiếp theo theo hàng đợi (lỡ buổi không bị tính thất bại), tuần và tiến độ giai đoạn, tuần giảm tải tự động; bắt đầu bằng một chạm.
+- **Tự tăng tiến**: đạt tối đa mục tiêu 2 buổi liên tiếp thì đề xuất lên bậc, chật vật hoặc báo đau thì đề xuất hạ bậc — luôn kèm lý do và chỉ đổi khi bạn đồng ý.
+- **Lịch sử**: xem, sửa từng hiệp, xóa buổi có hoàn tác (thùng rác 30 ngày).
 
-Lộ trình tiếp theo (lịch tập, tăng tiến tự động, lịch sử, offline): xem [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md).
+Lộ trình tiếp theo (offline, xuất/nhập dữ liệu, phát hành): xem [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md).
 
 ## Bắt đầu
 

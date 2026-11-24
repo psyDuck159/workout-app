@@ -105,3 +105,51 @@ export function GearFields({
     </fieldset>
   );
 }
+
+const weekdays = [
+  { value: 1, label: "T2" },
+  { value: 2, label: "T3" },
+  { value: 3, label: "T4" },
+  { value: 4, label: "T5" },
+  { value: 5, label: "T6" },
+  { value: 6, label: "T7" },
+  { value: 0, label: "CN" },
+];
+
+/** Ngày tập ưa thích (FR-SCH-01) — chỉ để nhắc, lịch vẫn là hàng đợi nên lỡ ngày không sao. */
+export function PreferredDaysField({
+  value,
+  onChange,
+}: {
+  value: number[];
+  onChange: (days: number[]) => void;
+}) {
+  return (
+    <fieldset>
+      <legend className="mb-2 font-medium">Ngày tập trong tuần</legend>
+      <div className="grid grid-cols-7 gap-1">
+        {weekdays.map((d) => (
+          <label
+            key={d.value}
+            className="bg-card has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-primary-foreground has-[:focus-visible]:ring-ring/50 flex h-11 cursor-pointer items-center justify-center rounded-md border text-sm font-medium has-[:focus-visible]:ring-[3px]"
+          >
+            <input
+              type="checkbox"
+              checked={value.includes(d.value)}
+              onChange={(e) =>
+                onChange(
+                  e.target.checked ? [...value, d.value] : value.filter((x) => x !== d.value),
+                )
+              }
+              className="sr-only"
+            />
+            {d.label}
+          </label>
+        ))}
+      </div>
+      <p className="text-muted-foreground mt-2 text-sm">
+        Không bắt buộc. Lỡ ngày thì buổi đó vẫn chờ bạn ở lần tập tới.
+      </p>
+    </fieldset>
+  );
+}

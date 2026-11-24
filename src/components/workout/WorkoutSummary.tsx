@@ -8,6 +8,7 @@ import { summarize } from "@/domain/session";
 import { formatDuration } from "@/domain/timer";
 import { buttonVariants } from "@/components/ui/button";
 import { RatingChips } from "./RestStep";
+import SuggestionList from "./SuggestionList";
 import type { WorkoutExercise } from "./types";
 
 /** Tóm tắt sau buổi tập (FR-WKP-12): thời lượng, kết quả từng bài, kỷ lục mới, đánh giá, ghi chú. */
@@ -91,6 +92,11 @@ export default function WorkoutSummary({
           );
         })}
       </ul>
+
+      <SuggestionList
+        sessionId={sessionId}
+        exerciseNames={Object.fromEntries([...exercisesById.values()].map((e) => [e.id, e.nameVi]))}
+      />
 
       <label className="block space-y-2">
         <span className="font-medium">Ghi chú</span>

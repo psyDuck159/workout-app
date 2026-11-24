@@ -22,7 +22,7 @@ export default function WorkoutPage() {
         catalog={catalog}
         ladders={ladders.map((l) => ({
           id: l.id,
-          steps: l.steps.map((s) => ({ exerciseId: s.exerciseId })),
+          steps: l.steps,
         }))}
       />
     </main>

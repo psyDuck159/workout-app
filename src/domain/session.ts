@@ -48,7 +48,8 @@ export type PlayerEvent =
   | { type: "reportPain" }
   | { type: "finish" };
 
-export const ratingToRpe: Record<Rating, number> = { easy: 6, medium: 8, hard: 10 };
+/** "Vừa" = RPE 7 (còn sức thêm khoảng 3 lần) — đủ điều kiện lên bậc với ngưỡng maxRpe 7 của các thang. */
+export const ratingToRpe: Record<Rating, number> = { easy: 6, medium: 7, hard: 9 };
 
 export function initialPlayer(plan: readonly PlannedItem[]): PlayerState {
   const items = plan.map((p) => ({ sets: p.sets, done: 0, skipped: false, pain: false }));

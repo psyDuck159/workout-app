@@ -33,7 +33,8 @@ test("onboarding lưu hồ sơ, tải lại vẫn còn, chương trình chọn b
   await page.reload();
   await expect(page.getByText("4 buổi/tuần · 45 phút")).toBeVisible();
 
-  await page.getByRole("link", { name: "Xem buổi tập" }).click();
+  await expect(page.getByText("Buổi tiếp theo")).toBeVisible();
+  await page.goto("/program/phase/foundation");
   await expect(page.getByRole("link", { name: "Treo xà" })).toBeVisible();
 });
 

@@ -1,84 +1,50 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Play } from "lucide-react";
-import type { Exercise, Gear, Ladder, SessionTemplate } from "@/content/schema";
+import type { ProgramClientData } from "@/content/client";
+import type { Gear } from "@/content/schema";
 import { gearLabels } from "@/content/labels";
-import { useActiveSession, useLadderStates, useProfile, useRepositories } from "@/data/hooks";
-import { buildSessionPlan } from "@/domain/plan";
+import { useActiveSession, useCompletedSessions, useLadderStates, useProfile } from "@/data/hooks";
 import { formatRest, formatTarget } from "@/domain/format";
-import { initialPlayer } from "@/domain/session";
-import { unlockAudio } from "@/platform/audio";
+import { adjustmentsFor, computeSchedule } from "@/domain/schedule";
 import { Button } from "@/components/ui/button";
 import ActiveSessionBanner from "@/components/workout/ActiveSessionBanner";
-
-export type SessionExercise = Pick<Exercise, "id" | "nameVi" | "equipment" | "measure">;
-
-interface PhaseSessionsProps {
-  programId: string;
-  phaseId: string;
-  sessions: SessionTemplate[];
-  ladders: Ladder[];
-  exercises: SessionExercise[];
-}
+import { planFor, useStartSession } from "@/components/workout/useStartSession";
 
 const NO_GEAR: Gear[] = [];
 
 export default function PhaseSessions({
-  programId,
+  data,
   phaseId,
-  sessions,
-  ladders,
-  exercises,
-}: PhaseSessionsProps) {
-  const router = useRouter();
-  const repos = useRepositories();
+}: {
+  data: ProgramClientData;
+  phaseId: string;
+}) {
   const { data: profile, loading } = useProfile();
   const { data: ladderStates } = useLadderStates();
   const { data: active } = useActiveSession();
-  const [starting, setStarting] = useState<string>();
-  const [error, setError] = useState<string>();
-  const gear = profile?.gear ?? NO_GEAR;
-  const exercisesById = new Map(exercises.map((e) => [e.id, e]));
-  const laddersById = new Map(ladders.map((l) => [l.id, l]));
-  const ladderById = new Map(ladders.map((l) => [l.id, l.nameVi]));
+  const { data: completed } = useCompletedSessions();
+  const { start, starting, error } = useStartSession(data);
 
   if (loading) return null;
 
-  async function start(session: SessionTemplate) {
-    unlockAudio(); // iOS chỉ cho phát âm thanh sau một thao tác chạm.
-    setStarting(session.id);
-    setError(undefined);
-    try {
-      const plan = buildSessionPlan(
-        session,
-        laddersById,
-        exercisesById,
-        ladderStates ?? new Map(),
-        gear,
-      );
-      await repos.startSession({
-        programId,
-        phaseId,
-        sessionTemplateId: session.id,
-        titleVi: `Buổi ${session.id} — ${session.titleVi}`,
-        plan,
-        player: initialPlayer(plan),
-      });
-      router.push("/workout");
-    } catch {
-      setError("Không bắt đầu được buổi tập.");
-      setStarting(undefined);
-    }
-  }
+  const phase = data.program.phases.find((p) => p.id === phaseId)!;
+  const gear = profile?.gear ?? NO_GEAR;
+  const exercisesById = new Map(data.exercises.map((e) => [e.id, e]));
+  const ladderNames = new Map(data.ladders.map((l) => [l.id, l.nameVi]));
+  const schedule =
+    profile && completed
+      ? computeSchedule(data.program, completed, profile.daysPerWeek)
+      : undefined;
+  // Tuần giảm tải / buổi khởi động lại chỉ áp dụng cho giai đoạn đang tập.
+  const adjustments = schedule?.phaseId === phaseId ? adjustmentsFor(schedule) : [];
 
   return (
     <div className="space-y-6">
       <ActiveSessionBanner />
 
-      <div className="bg-muted/50 rounded-lg p-4 text-sm">
+      <div className="bg-muted/50 space-y-1 rounded-lg p-4 text-sm">
         {profile ? (
           <p>
             <span className="font-medium">Dụng cụ: </span>
@@ -96,6 +62,12 @@ export default function PhaseSessions({
             để chương trình chọn bài theo dụng cụ của bạn và bắt đầu tập.
           </p>
         )}
+        {schedule?.phaseId === phaseId && (
+          <p>
+            Bạn đang ở tuần {schedule.week}/{schedule.weeks} của giai đoạn này
+            {schedule.isDeloadWeek && " — tuần giảm tải, số hiệp đã được giảm"}.
+          </p>
+        )}
       </div>
 
       {error && (
@@ -104,13 +76,14 @@ export default function PhaseSessions({
         </p>
       )}
 
-      {sessions.map((session) => {
-        const plan = buildSessionPlan(
-          session,
-          laddersById,
-          exercisesById,
+      {phase.sessions.map((session) => {
+        const plan = planFor(
+          data,
+          phaseId,
+          session.id,
           ladderStates ?? new Map(),
           gear,
+          adjustments,
         );
         return (
           <section key={session.id} className="space-y-3">
@@ -119,9 +92,14 @@ export default function PhaseSessions({
                 Buổi {session.id} — {session.titleVi}
               </h2>
               {profile && !active && (
-                <Button onClick={() => start(session)} disabled={starting !== undefined}>
+                <Button
+                  onClick={() => start(phaseId, session.id, plan)}
+                  disabled={starting !== undefined}
+                >
                   <Play className="size-4" aria-hidden />
-                  {starting === session.id ? "Đang mở…" : `Bắt đầu buổi ${session.id}`}
+                  {starting === `${phaseId}/${session.id}`
+                    ? "Đang mở…"
+                    : `Bắt đầu buổi ${session.id}`}
                 </Button>
               )}
             </div>
@@ -143,7 +121,7 @@ export default function PhaseSessions({
                       </span>
                     </div>
                     <p className="text-muted-foreground mt-1 text-sm">
-                      {item.ladderId ? `${ladderById.get(item.ladderId)} · ` : ""}Nghỉ{" "}
+                      {item.ladderId ? `${ladderNames.get(item.ladderId)} · ` : ""}Nghỉ{" "}
                       {formatRest(item.restSec)}
                     </p>
                   </li>

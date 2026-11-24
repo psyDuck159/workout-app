@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import AppHeader from "@/components/AppHeader";
+import BottomNav from "@/components/BottomNav";
 import StorageWarning from "@/components/StorageWarning";
 import "./globals.css";
 
@@ -14,10 +14,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi">
-      <body className={inter.className}>
-        <AppHeader />
+      {/* Chừa chỗ cho thanh tab dưới màn hình. */}
+      <body className={`${inter.className} pb-20`}>
         <StorageWarning />
         {children}
+        <BottomNav />
       </body>
     </html>
   );
