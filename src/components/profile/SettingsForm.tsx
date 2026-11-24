@@ -8,6 +8,7 @@ import type { Settings, UserProfile } from "@/data/types";
 import { getPersistState, requestPersistentStorage, type PersistState } from "@/platform/storage";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ToggleCard } from "@/components/ChoiceGroup";
+import DataSection from "./DataSection";
 import { GearFields, GoalField, PreferredDaysField, ScheduleFields } from "./ProfileFields";
 
 const persistLabels: Record<PersistState, string> = {
@@ -16,7 +17,13 @@ const persistLabels: Record<PersistState, string> = {
   unsupported: "Trình duyệt không hỗ trợ — nên sao lưu dữ liệu định kỳ.",
 };
 
-export default function SettingsForm({ gearIndex }: { gearIndex: GearIndex }) {
+export default function SettingsForm({
+  gearIndex,
+  exerciseNames,
+}: {
+  gearIndex: GearIndex;
+  exerciseNames: Record<string, string>;
+}) {
   const repos = useRepositories();
   const { data: profile, loading } = useProfile();
   const { data: settings } = useSettings();
@@ -28,16 +35,6 @@ export default function SettingsForm({ gearIndex }: { gearIndex: GearIndex }) {
   }, []);
 
   if (loading) return null;
-  if (!profile) {
-    return (
-      <div className="space-y-4">
-        <p>Bạn chưa thiết lập hồ sơ trên thiết bị này.</p>
-        <Link href="/welcome" className={buttonVariants()}>
-          Thiết lập ngay
-        </Link>
-      </div>
-    );
-  }
 
   async function saveProfile(patch: ProfilePatch) {
     try {
@@ -57,35 +54,53 @@ export default function SettingsForm({ gearIndex }: { gearIndex: GearIndex }) {
     }
   }
 
+  // DataSection luôn ở cùng vị trí trong cây để không bị tạo lại (mất thông báo) khi nhập
+  // file sao lưu làm hồ sơ xuất hiện.
   return (
     <div className="space-y-8">
-      <p className="text-muted-foreground min-h-5 text-sm" role="status" aria-live="polite">
-        {status}
-      </p>
-
-      <ProfileSection initial={profile} onSave={saveProfile} />
-      {settings && <PreferencesSection initial={settings} onSave={saveSettings} />}
-
-      <section className="space-y-2">
-        <h2 className="text-lg font-semibold">Lưu trữ</h2>
-        <p className="text-muted-foreground text-sm">
-          Dữ liệu chỉ lưu trên thiết bị này, không gửi lên máy chủ.
-        </p>
-        {persist && (
-          <p className="text-sm">
-            <span className="font-medium">Lưu trữ bền vững: </span>
-            {persistLabels[persist]}
+      {profile ? (
+        <>
+          <p className="text-muted-foreground min-h-5 text-sm" role="status" aria-live="polite">
+            {status}
           </p>
-        )}
-        {persist === "denied" && (
-          <Button
-            variant="outline"
-            onClick={async () => setPersist(await requestPersistentStorage())}
-          >
-            Yêu cầu lại
-          </Button>
-        )}
-      </section>
+
+          <ProfileSection initial={profile} onSave={saveProfile} />
+          {settings && <PreferencesSection initial={settings} onSave={saveSettings} />}
+
+          <section className="space-y-2">
+            <h2 className="text-lg font-semibold">Lưu trữ</h2>
+            <p className="text-muted-foreground text-sm">
+              Dữ liệu chỉ lưu trên thiết bị này, không gửi lên máy chủ.
+            </p>
+            {persist && (
+              <p className="text-sm">
+                <span className="font-medium">Lưu trữ bền vững: </span>
+                {persistLabels[persist]}
+              </p>
+            )}
+            {persist === "denied" && (
+              <Button
+                variant="outline"
+                onClick={async () => setPersist(await requestPersistentStorage())}
+              >
+                Yêu cầu lại
+              </Button>
+            )}
+          </section>
+        </>
+      ) : (
+        <div className="space-y-4">
+          <p>Bạn chưa thiết lập hồ sơ trên thiết bị này.</p>
+          <Link href="/welcome" className={buttonVariants()}>
+            Thiết lập ngay
+          </Link>
+          <p className="text-muted-foreground text-sm">
+            Đã có file sao lưu từ máy khác? Nhập ở mục Dữ liệu bên dưới để khôi phục.
+          </p>
+        </div>
+      )}
+
+      <DataSection key="data" exerciseNames={exerciseNames} />
     </div>
   );
 }

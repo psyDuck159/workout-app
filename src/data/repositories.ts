@@ -12,6 +12,7 @@ import {
   type ExerciseSessionResult,
   type ProgressionLadder,
 } from "@/domain/progression";
+import { BACKUP_FORMAT, planImport, type BackupFile, type ImportPlan } from "@/domain/backup";
 import { newId } from "@/lib/id";
 import type { WorkoutDB } from "./db";
 import type {
@@ -117,6 +118,16 @@ export interface Repositories {
   restoreSession(sessionId: string): Promise<void>;
   /** Xóa hẳn buổi đã nằm trong thùng rác quá `TRASH_DAYS` ngày. Trả về số buổi đã xóa. */
   purgeTrash(): Promise<number>;
+
+  /** Xuất toàn bộ dữ liệu (FR-DAT-01). */
+  exportBackup(): Promise<BackupFile>;
+  /** Xem trước kết quả nhập: những gì sẽ được thêm, bao nhiêu bản ghi trùng. */
+  previewImport(backup: BackupFile): Promise<ImportPlan>;
+  /** Hợp nhất bản sao lưu vào dữ liệu hiện có trong một giao dịch. */
+  importBackup(backup: BackupFile): Promise<ImportPlan>;
+  /** Xóa toàn bộ dữ liệu trên thiết bị (FR-DAT-04). */
+  wipeAll(): Promise<void>;
+  schemaVersion(): number;
 }
 
 const setValue = (s: SetLog) => s.reps ?? s.seconds ?? 0;
@@ -446,7 +457,73 @@ export function createRepositories(
         return expired.length;
       });
     },
+
+    async exportBackup() {
+      const db = openDb();
+      return db.transaction("r", db.tables, async () => ({
+        format: BACKUP_FORMAT,
+        schemaVersion: db.verno,
+        exportedAt: now().toISOString(),
+        data: {
+          profile: (await db.profile.get("me")) ?? null,
+          settings: (await db.settings.get("me")) ?? null,
+          ladderStates: await db.ladderStates.toArray(),
+          sessions: await db.sessions.toArray(),
+          sets: await db.sets.toArray(),
+          suggestions: await db.suggestions.toArray(),
+        },
+      }));
+    },
+
+    async previewImport(backup) {
+      return planImport(backup, await existingIds(openDb()));
+    },
+
+    async importBackup(backup) {
+      const db = openDb();
+      return db.transaction("rw", db.tables, async () => {
+        const plan = planImport(backup, await existingIds(db));
+        if (plan.profile) await db.profile.put(plan.profile);
+        if (plan.settings) await db.settings.put(plan.settings);
+        await db.ladderStates.bulkAdd(plan.ladderStates);
+        await db.sessions.bulkAdd(plan.sessions);
+        await db.sets.bulkAdd(plan.sets);
+        await db.suggestions.bulkAdd(plan.suggestions);
+        return plan;
+      });
+    },
+
+    async wipeAll() {
+      const db = openDb();
+      await db.transaction("rw", db.tables, async () => {
+        await Promise.all(db.tables.map((t) => t.clear()));
+      });
+    },
+
+    schemaVersion: () => openDb().verno,
   };
+
+  async function existingIds(db: WorkoutDB) {
+    const [profile, settings, active, sessionIds, setIds, ladderIds, suggestionIds] =
+      await Promise.all([
+        db.profile.get("me"),
+        db.settings.get("me"),
+        db.sessions.where("status").equals("in_progress").first(),
+        db.sessions.toCollection().primaryKeys(),
+        db.sets.toCollection().primaryKeys(),
+        db.ladderStates.toCollection().primaryKeys(),
+        db.suggestions.toCollection().primaryKeys(),
+      ]);
+    return {
+      hasProfile: profile !== undefined,
+      hasSettings: settings !== undefined,
+      hasActiveSession: active !== undefined,
+      sessionIds: new Set(sessionIds),
+      setIds: new Set(setIds),
+      ladderIds: new Set(ladderIds),
+      suggestionIds: new Set(suggestionIds),
+    };
+  }
 
   /** Bỏ các đề xuất cũ đang chờ của một thang (mỗi thang chỉ giữ đề xuất mới nhất). */
   async function dismissPendingFor(db: WorkoutDB, ladderId: string) {

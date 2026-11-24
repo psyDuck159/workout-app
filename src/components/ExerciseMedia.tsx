@@ -67,7 +67,9 @@ export default function ExerciseMedia({
           src={src}
           alt={i === 0 ? alt : ""}
           aria-hidden={i !== 0}
-          loading="lazy"
+          // Khung đầu thường là phần tử lớn nhất đầu trang (LCP) — tải ngay, ưu tiên cao.
+          loading={i === 0 ? "eager" : "lazy"}
+          fetchPriority={i === 0 ? "high" : "low"}
           decoding="async"
           className={cn(
             "absolute inset-0 size-full object-contain transition-opacity duration-300",

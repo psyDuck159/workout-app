@@ -107,7 +107,7 @@ scripts/
 
 ## 3. Lộ trình sprint — MVP (≈ 6 tuần)
 
-**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ✅ · Sprint 3 ✅ · Sprint 4 ✅ · Sprint 5 ⏭ tiếp theo
+**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ✅ · Sprint 3 ✅ · Sprint 4 ✅ · Sprint 5 ✅ (chờ deploy + thử nghiệm người dùng)
 
 Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
@@ -189,7 +189,9 @@ Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
 **DoD:** Bộ test bảng (table-driven) cho engine với ≥ 15 kịch bản; mô phỏng 4 tuần dữ liệu cho ra gợi ý hợp lý.
 
-### Sprint 5 — PWA offline, dữ liệu, phát hành (1 tuần)
+### Sprint 5 — PWA offline, dữ liệu, phát hành (1 tuần) — S5-1…6 ✅, S5-7/8 chờ thực hiện
+
+> Ghi chú: service worker tự viết (`scripts/sw-template.js`, sinh `public/sw.js` lúc build) lưu sẵn mọi trang, tài nguyên và hình minh họa. Nhập dữ liệu hợp nhất, không ghi đè dữ liệu trên máy. Đổi sang font hệ thống (bỏ Inter) để đạt Lighthouse ≥ 90. Lighthouse mobile: Trang chủ 92, Bài tập 95, Chi tiết bài 98, Giai đoạn 92, Lịch sử 90, Cài đặt 83 (form phụ thuộc dữ liệu IndexedDB); Accessibility/Best Practices/SEO 100. S5-7 và S5-8 cần người thực hiện: xem `docs/RELEASE_CHECKLIST.md`, `docs/USABILITY_TEST.md`.
 
 | Việc                                                                                                                                           | FR / NFR                         |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |

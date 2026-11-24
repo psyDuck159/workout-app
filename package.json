@@ -15,9 +15,10 @@
     "format:check": "prettier --check .",
     "build:static": "cross-env STATIC_EXPORT=1 next build --turbopack",
     "validate:content": "tsx scripts/validate-content.ts",
-    "prebuild": "npm run validate:content",
-    "prebuild:static": "npm run validate:content",
-    "generate:illustrations": "tsx scripts/generate-illustrations.ts"
+    "prebuild": "npm run validate:content && tsx scripts/build-sw.ts",
+    "prebuild:static": "npm run validate:content && tsx scripts/build-sw.ts",
+    "generate:illustrations": "tsx scripts/generate-illustrations.ts",
+    "generate:icons": "tsx scripts/generate-icons.ts"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.3",
@@ -35,6 +36,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4",
