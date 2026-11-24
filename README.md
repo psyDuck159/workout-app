@@ -10,8 +10,10 @@
 - **Tìm kiếm không dấu** ("chong day" → "Chống đẩy"), lọc theo nhóm cơ, dụng cụ, độ khó.
 - **Chương trình 12 tuần**: 3 giai đoạn × 4 tuần, buổi A/B xen kẽ, tuần giảm tải; tự chọn bài theo dụng cụ.
 - **8 thang biến thể** từ dễ đến khó (VD: chống đẩy tường → … → chống đẩy một tay).
+- **Thiết lập lộ trình** 4 bước, bỏ qua được (mục tiêu, lịch tập, dụng cụ, sàng lọc sức khỏe) — không cần tài khoản; dữ liệu lưu trên thiết bị (IndexedDB).
+- **Cài đặt**: đổi dụng cụ là chương trình tự chọn lại bài phù hợp; tùy chọn âm báo, rung, giữ màn hình sáng.
 
-Lộ trình tiếp theo (lưu dữ liệu, ghi log buổi tập, timer, tăng tiến tự động, offline): xem [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md).
+Lộ trình tiếp theo (ghi log buổi tập, timer, tăng tiến tự động, offline): xem [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md).
 
 ## Bắt đầu
 
@@ -45,7 +47,9 @@ src/
 ├─ app/            # Các trang (Next.js App Router)
 ├─ components/     # Component giao diện (+ ui/ từ shadcn)
 ├─ content/        # Nội dung tĩnh: schema Zod, bài tập, thang biến thể, chương trình
-└─ domain/         # Logic thuần, có unit test: tìm kiếm, chọn bậc theo dụng cụ, định dạng
+├─ data/           # IndexedDB (Dexie): schema, repository, React hooks
+├─ domain/         # Logic thuần, có unit test: tìm kiếm, chọn bậc theo dụng cụ, hồ sơ, định dạng
+└─ platform/       # Bọc API trình duyệt (lưu trữ bền vững…) để sau thay bằng Capacitor
 scripts/
 ├─ illustrations/  # Bộ dựng hình người que (IK) và tư thế từng bài
 ├─ generate-illustrations.ts
@@ -63,7 +67,7 @@ docs/                     # SRS, kế hoạch triển khai, nguồn media
 
 ## Công nghệ
 
-Next.js 15 · React 19 · TypeScript · Tailwind CSS 4 · shadcn/ui · Zod · Vitest · Playwright.
+Next.js 15 · React 19 · TypeScript · Tailwind CSS 4 · shadcn/ui · Zod · Dexie (IndexedDB) · Vitest · Playwright.
 
 ## Tài liệu
 

@@ -1,6 +1,7 @@
 import "server-only";
 import { z } from "zod";
 import { Attribution, Exercise, Ladder, Program } from "./schema";
+import type { GearIndex } from "@/data/repositories";
 import push from "./exercises/push.json";
 import pull from "./exercises/pull.json";
 import legs from "./exercises/legs.json";
@@ -46,3 +47,12 @@ export function findLadderOf(exerciseId: string) {
 export function mediaUrl(frame: string): string {
   return `/media/exercises/${frame}`;
 }
+
+/** Dữ liệu tối thiểu gửi xuống client để đồng bộ bậc tập theo dụng cụ. */
+export const gearIndex: GearIndex = {
+  ladders: ladders.map((l) => ({
+    id: l.id,
+    steps: l.steps.map((s) => ({ exerciseId: s.exerciseId })),
+  })),
+  exercises: exercises.map((e) => ({ id: e.id, equipment: e.equipment })),
+};

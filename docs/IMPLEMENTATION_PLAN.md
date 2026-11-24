@@ -107,7 +107,7 @@ scripts/
 
 ## 3. Lộ trình sprint — MVP (≈ 6 tuần)
 
-**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ⏭ tiếp theo
+**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ✅ · Sprint 3 ⏭ tiếp theo
 
 Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
@@ -140,7 +140,9 @@ Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
 **DoD:** Toàn bộ nội dung validate pass; không còn link minh họa ngoài; unit test cho `search.ts`.
 
-### Sprint 2 — Lưu trữ & Onboarding (1 tuần)
+### Sprint 2 — Lưu trữ & Onboarding (1 tuần) ✅ Hoàn thành
+
+> Ghi chú: onboarding gộp số buổi + thời lượng vào một bước (4 bước tổng). Cài đặt lưu ngay khi chạm, không cần nút Lưu. Bảng `sessions`, `sets`, `suggestions` đã có trong schema v1 để dùng từ Sprint 3.
 
 | Việc                                                                                                                                                         | FR / NFR              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- |
