@@ -18,6 +18,10 @@ export function Dialog({
   className?: string;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
+  // Sự kiện "close" cũng bắn khi chính code đóng hộp thoại (open → false). Chỉ báo cho cha
+  // khi người dùng tự đóng (VD: phím Esc), nếu không sẽ ghi đè trạng thái cha vừa đặt.
+  const openRef = useRef(open);
+  openRef.current = open;
 
   useEffect(() => {
     const dialog = ref.current;
@@ -29,7 +33,9 @@ export function Dialog({
   return (
     <dialog
       ref={ref}
-      onClose={onClose}
+      onClose={() => {
+        if (openRef.current) onClose();
+      }}
       aria-labelledby="dialog-title"
       className={cn(
         "bg-background text-foreground m-auto w-[min(28rem,calc(100%-2rem))] rounded-xl p-5 shadow-xl backdrop:bg-black/50",

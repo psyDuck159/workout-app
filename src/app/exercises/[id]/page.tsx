@@ -47,7 +47,12 @@ function Section({ title, items, ordered }: { title: string; items: string[]; or
 function ExternalText({ href, children }: { href: string | null; children: React.ReactNode }) {
   if (!href) return <>{children}</>;
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="underline">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block py-1 underline"
+    >
       {children}
     </a>
   );
@@ -146,7 +151,12 @@ export default async function ExercisePage({ params }: Props) {
           <ul className="list-disc pl-5">
             {exercise.sources.map((s) => (
               <li key={s.url}>
-                <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline">
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-1 underline"
+                >
                   {s.title}
                 </a>
               </li>

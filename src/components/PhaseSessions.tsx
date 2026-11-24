@@ -9,6 +9,7 @@ import { useActiveSession, useCompletedSessions, useLadderStates, useProfile } f
 import { formatRest, formatTarget } from "@/domain/format";
 import { adjustmentsFor, computeSchedule } from "@/domain/schedule";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import ActiveSessionBanner from "@/components/workout/ActiveSessionBanner";
 import { planFor, useStartSession } from "@/components/workout/useStartSession";
 
@@ -27,8 +28,6 @@ export default function PhaseSessions({
   const { data: completed } = useCompletedSessions();
   const { start, starting, error } = useStartSession(data);
 
-  if (loading) return null;
-
   const phase = data.program.phases.find((p) => p.id === phaseId)!;
   const gear = profile?.gear ?? NO_GEAR;
   const exercisesById = new Map(data.exercises.map((e) => [e.id, e]));
@@ -44,7 +43,14 @@ export default function PhaseSessions({
     <div className="space-y-6">
       <ActiveSessionBanner />
 
-      <div className="bg-muted/50 space-y-1 rounded-lg p-4 text-sm">
+      {/* Server render sẵn danh sách bài mặc định (không dụng cụ) để hiện ngay. Hộp thông tin
+          giữ sẵn chỗ (tránh xô lệch bố cục) và chỉ hiện chữ khi đã đọc xong hồ sơ. */}
+      <div
+        className={cn(
+          "bg-muted/50 min-h-14 space-y-1 rounded-lg p-4 text-sm",
+          loading && "invisible",
+        )}
+      >
         {profile ? (
           <p>
             <span className="font-medium">Dụng cụ: </span>
@@ -55,11 +61,11 @@ export default function PhaseSessions({
           </p>
         ) : (
           <p>
-            Đang hiển thị bài không cần dụng cụ.{" "}
+            Đang hiện bài không cần dụng cụ.{" "}
             <Link href="/welcome" className="underline">
               Thiết lập hồ sơ
             </Link>{" "}
-            để chương trình chọn bài theo dụng cụ của bạn và bắt đầu tập.
+            để bắt đầu tập.
           </p>
         )}
         {schedule?.phaseId === phaseId && (

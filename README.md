@@ -16,8 +16,10 @@
 - **Hôm nay**: buổi tiếp theo theo hàng đợi (lỡ buổi không bị tính thất bại), tuần và tiến độ giai đoạn, tuần giảm tải tự động; bắt đầu bằng một chạm.
 - **Tự tăng tiến**: đạt tối đa mục tiêu 2 buổi liên tiếp thì đề xuất lên bậc, chật vật hoặc báo đau thì đề xuất hạ bậc — luôn kèm lý do và chỉ đổi khi bạn đồng ý.
 - **Lịch sử**: xem, sửa từng hiệp, xóa buổi có hoàn tác (thùng rác 30 ngày).
+- **Dùng offline & cài lên màn hình chính** (PWA): mở một lần khi có mạng là tập được khi mất mạng.
+- **Dữ liệu là của bạn**: xuất JSON/CSV, nhập lại trên máy khác (hợp nhất, không ghi đè), xóa toàn bộ.
 
-Lộ trình tiếp theo (offline, xuất/nhập dữ liệu, phát hành): xem [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md).
+Lộ trình sau MVP (đóng gói Android/iOS bằng Capacitor, thống kê, nhắc tập…): xem [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md).
 
 ## Bắt đầu
 
@@ -78,6 +80,8 @@ Next.js 15 · React 19 · TypeScript · Tailwind CSS 4 · shadcn/ui · Zod · De
 - [Đặc tả yêu cầu (SRS)](docs/SRS.md) — khảo sát thị trường, pain point, yêu cầu chức năng/phi chức năng
 - [Kế hoạch triển khai](docs/IMPLEMENTATION_PLAN.md)
 - [Nguồn media](docs/MEDIA_SOURCES.md)
+- [Deploy & kiểm thử thiết bị thật](docs/RELEASE_CHECKLIST.md)
+- [Kịch bản thử nghiệm người dùng](docs/USABILITY_TEST.md)
 
 ## Giấy phép
 
