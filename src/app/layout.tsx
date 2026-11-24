@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import AppHeader from "@/components/AppHeader";
+import StorageWarning from "@/components/StorageWarning";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="vi">
       <body className={inter.className}>
         <AppHeader />
+        <StorageWarning />
         {children}
       </body>
     </html>

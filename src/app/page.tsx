@@ -1,9 +1,10 @@
 import Link from "next/link";
+import PlanSummary from "@/components/profile/PlanSummary";
+import { buttonVariants } from "@/components/ui/button";
 import { defaultProgram, exercises } from "@/content";
 
 export default function Home() {
   const program = defaultProgram;
-  const firstPhase = program.phases[0];
 
   return (
     <main className="mx-auto max-w-2xl space-y-6 px-4 py-8">
@@ -15,36 +16,24 @@ export default function Home() {
         </p>
       </header>
 
+      <PlanSummary firstPhaseHref={`/program/phase/${program.phases[0].id}`} />
+
       <section className="bg-card space-y-3 rounded-lg border p-4">
         <h2 className="font-semibold">{program.nameVi}</h2>
         <p className="text-muted-foreground text-sm">
           {program.phases.length} giai đoạn · {program.phases.reduce((n, p) => n + p.weeks, 0)} tuần
         </p>
-        <div className="flex flex-wrap gap-2">
-          <Link
-            href={`/program/phase/${firstPhase.id}`}
-            className="bg-primary text-primary-foreground inline-flex h-11 items-center rounded-md px-4 text-sm font-medium"
-          >
-            Xem giai đoạn 1
-          </Link>
-          <Link
-            href="/program"
-            className="inline-flex h-11 items-center rounded-md border px-4 text-sm font-medium"
-          >
-            Toàn bộ chương trình
-          </Link>
-        </div>
+        <Link href="/program" className={buttonVariants({ variant: "outline" })}>
+          Toàn bộ chương trình
+        </Link>
       </section>
 
       <section className="bg-card space-y-3 rounded-lg border p-4">
         <h2 className="font-semibold">Thư viện bài tập</h2>
         <p className="text-muted-foreground text-sm">
-          {exercises.length} bài tập kèm hướng dẫn, lỗi thường gặp và ảnh minh họa.
+          {exercises.length} bài tập kèm hướng dẫn, lỗi thường gặp và hình minh họa.
         </p>
-        <Link
-          href="/exercises"
-          className="inline-flex h-11 items-center rounded-md border px-4 text-sm font-medium"
-        >
+        <Link href="/exercises" className={buttonVariants({ variant: "outline" })}>
           Mở thư viện
         </Link>
       </section>

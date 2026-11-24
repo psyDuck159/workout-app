@@ -1,19 +1,16 @@
 import { expect, test } from "@playwright/test";
 
-test("trang chủ dẫn tới giai đoạn 1, chọn dụng cụ đổi bài tập", async ({ page }) => {
+test("chưa có hồ sơ: chương trình hiển thị bài không cần dụng cụ", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Tập bodyweight tại nhà");
 
-  await page.getByRole("link", { name: "Xem giai đoạn 1" }).click();
+  await page.getByRole("link", { name: "Toàn bộ chương trình" }).click();
+  await page.getByRole("link", { name: /Giai đoạn 1/ }).click();
   await expect(page).toHaveURL(/\/program\/phase\/foundation$/);
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("Giai đoạn 1");
 
-  // Không có dụng cụ: thang kéo bắt đầu bằng kéo khăn, chưa có bài treo xà.
   await expect(page.getByRole("link", { name: "Kéo khăn ở cửa" }).first()).toBeVisible();
   await expect(page.getByRole("link", { name: "Treo xà" })).toHaveCount(0);
-
-  await page.getByLabel("Xà đơn").check();
-  await expect(page.getByRole("link", { name: "Treo xà" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Thiết lập hồ sơ" })).toBeVisible();
 });
 
 test("thư viện tìm không dấu và mở chi tiết bài tập", async ({ page }) => {

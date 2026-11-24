@@ -8,6 +8,7 @@ const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/program", label: "Chương trình" },
   { href: "/exercises", label: "Bài tập" },
+  { href: "/settings", label: "Cài đặt" },
 ];
 
 export default function AppHeader() {
@@ -15,7 +16,10 @@ export default function AppHeader() {
 
   return (
     <header className="bg-background/95 sticky top-0 z-10 border-b backdrop-blur">
-      <nav aria-label="Điều hướng chính" className="mx-auto flex max-w-2xl gap-1 px-2">
+      <nav
+        aria-label="Điều hướng chính"
+        className="mx-auto flex max-w-2xl gap-0.5 overflow-x-auto px-1"
+      >
         {links.map(({ href, label }) => {
           const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
           return (
@@ -24,7 +28,7 @@ export default function AppHeader() {
               href={href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex h-12 items-center px-3 text-sm font-medium",
+                "flex h-12 shrink-0 items-center px-2.5 text-sm font-medium",
                 active
                   ? "border-primary text-foreground border-b-2"
                   : "text-muted-foreground hover:text-foreground",
