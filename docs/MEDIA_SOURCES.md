@@ -10,7 +10,7 @@ Ngày kiểm tra: 22/11/2026. Kiểm tra trực tiếp qua GitHub API và wger R
 
 - Tư thế khai báo trong `scripts/illustrations/poses.ts`, dựng hình bằng `scripts/illustrations/skeleton.ts` (IK 2 đoạn để tay chân chạm đúng sàn/xà/ghế).
 - Sinh lại bằng `npm run generate:illustrations` — cập nhật `media.frames` và `src/content/media-attribution.json`.
-- Không phụ thuộc giấy phép bên ngoài; mỗi file ~4 KB; tự đổi màu theo chế độ sáng/tối của hệ điều hành.
+- Phát hành theo giấy phép MIT cùng toàn bộ repo (xem `LICENSE`); không phụ thuộc giấy phép bên ngoài; mỗi file ~4 KB; tự đổi màu theo chế độ sáng/tối của hệ điều hành.
 
 Các mục bên dưới giữ lại làm hồ sơ kiểm tra, phòng khi sau này muốn bổ sung ảnh chụp thật.
 

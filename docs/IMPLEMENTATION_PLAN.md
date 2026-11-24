@@ -107,9 +107,11 @@ scripts/
 
 ## 3. Lộ trình sprint — MVP (≈ 6 tuần)
 
+**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ⏭ tiếp theo
+
 Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
-### Sprint 0 — Dọn nền (2–3 ngày)
+### Sprint 0 — Dọn nền (2–3 ngày) ✅ Hoàn thành
 
 | Việc | Chi tiết                                                                                           |
 | ---- | -------------------------------------------------------------------------------------------------- |
@@ -122,7 +124,9 @@ Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
 **DoD:** CI xanh; app chạy như cũ; có danh sách nguồn media hợp lệ.
 
-### Sprint 1 — Nội dung & schema (1 tuần)
+### Sprint 1 — Nội dung & schema (1 tuần) ✅ Hoàn thành
+
+> Khác kế hoạch: hình minh họa chuyển từ ảnh thư viện mở sang SVG tự sinh; 44 bài thay vì ~40; nâng Next 15.5.29 / React 19.1.10 để vá bảo mật.
 
 | Việc                                                                                                                        | FR                    |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------- |
