@@ -62,17 +62,13 @@ Sản phẩm giúp người mới và người tập trung cấp:
 | PWA                                        | Progressive Web App — web app cài được lên màn hình chính, chạy offline             |
 | MVP                                        | Minimum Viable Product                                                              |
 
-### 1.4 Hiện trạng codebase (tại thời điểm viết)
+### 1.4 Hiện trạng codebase (cập nhật 24/11/2026, sau Sprint 1)
 
-- Next.js 15.5 (App Router, Turbopack), React 19, Tailwind 4, shadcn/ui (Checkbox, Label).
-- Dữ liệu tĩnh trong `src/app/workout-data.tsx`: 3 giai đoạn, ~16 bài tập.
-- Trang `/` chọn giai đoạn bằng `<select>`; `/phase/[id]` hiển thị danh sách bài + checkbox "Hoàn thành".
-- **Hạn chế đã phát hiện:**
-  - Trạng thái hoàn thành chỉ nằm trong `useState` → mất khi tải lại trang (chưa có lưu trữ).
-  - Trường `illustration` trỏ tới **trang web bên ngoài** (iStock, wikiHow…) chứ không phải ảnh → người dùng phải rời app, một số link là trang bán ảnh có watermark.
-  - `reps` là chuỗi tự do ("3 hiệp x 10-12 reps") → không thể ghi số liệu hay tính tăng tiến.
-  - `src/app/phase/[id]/page.tsx` khai báo `params: { id: string }` đồng bộ; ở Next.js 15 `params` là `Promise` và cần `await`.
-  - Không có ngày tập, lịch, lịch sử, timer nghỉ.
+- Next.js 15.5 (App Router, Turbopack), React 19.1, Tailwind 4, shadcn/ui; build được dạng static export (sẵn sàng đóng gói Capacitor).
+- Nội dung có cấu trúc trong `src/content/` (Zod schema): 44 bài tập, 8 thang biến thể, chương trình 12 tuần × 3 giai đoạn; được kiểm tra chéo bằng `npm run validate:content` trước mỗi lần build.
+- Hình minh họa: SVG người que tự sinh cho cả 44 bài (`npm run generate:illustrations`), không dùng ảnh bên thứ ba.
+- Trang: thư viện bài tập (tìm không dấu, lọc nhóm cơ/dụng cụ/độ khó), chi tiết bài, chương trình và giai đoạn (chọn bậc khởi đầu theo dụng cụ).
+- **Chưa có:** lưu trữ dữ liệu người dùng, onboarding, ghi log buổi tập, timer, tăng tiến tự động, PWA offline — theo lộ trình Sprint 2–5 trong `docs/IMPLEMENTATION_PLAN.md`.
 
 SRS này mô tả trạng thái đích; mục 10 chia lộ trình từ hiện trạng đi lên.
 
@@ -231,7 +227,7 @@ Sản phẩm độc lập, dạng **web app responsive + PWA** (cài lên màn h
 - **C-01:** Next.js App Router + TypeScript + Tailwind + shadcn/ui (theo codebase hiện có).
 - **C-02:** Lõi tập luyện phải hoạt động **không cần tài khoản và không cần mạng** sau lần tải đầu.
 - **C-03:** Không tích hợp SDK quảng cáo.
-- **C-04:** Media minh họa lấy từ **thư viện mở** có giấy phép đã xác minh (CC0/CC-BY/CC-BY-SA/public domain), tải về và tự host kèm ghi nguồn — không hotlink, không dùng ảnh từ iStock/trang thương mại.
+- **C-04:** Media minh họa là **hình SVG tự sinh** thuộc dự án (xem `docs/MEDIA_SOURCES.md`). Nếu bổ sung ảnh bên ngoài: chỉ dùng nguồn có giấy phép đã xác minh (CC0/CC-BY/CC-BY-SA/public domain) và rõ nguồn gốc, tự host kèm ghi công — không hotlink, không dùng ảnh từ iStock/trang thương mại.
 - **C-07:** Code phải tương thích static export (`output: "export"`) để đóng gói mobile bằng Capacitor sau MVP.
 - **C-08:** Sản phẩm miễn phí, không có chi phí server trong MVP.
 - **C-05:** Nội dung mặc định tiếng Việt; kiến trúc hỗ trợ i18n để thêm tiếng Anh.
@@ -784,6 +780,7 @@ _(Đo bằng analytics ẩn danh, opt-out được — NFR-SEC-01.)_
    phát triển hướng mobile, nhưng hiện làm trên pwa trước ở MVP
 5. Nguồn media minh họa: tự quay, thuê vẽ, hay dùng thư viện mở?
    media thư viện mở
+   _Cập nhật 22/11/2026: ảnh thư viện mở có dấu hiệu không rõ nguồn gốc nên đã chuyển sang SVG tự sinh (xem `docs/MEDIA_SOURCES.md`)._
 
 ---
 
