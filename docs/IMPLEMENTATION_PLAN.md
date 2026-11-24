@@ -107,7 +107,7 @@ scripts/
 
 ## 3. Lộ trình sprint — MVP (≈ 6 tuần)
 
-**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ✅ · Sprint 3 ⏭ tiếp theo
+**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ✅ · Sprint 3 ✅ · Sprint 4 ⏭ tiếp theo
 
 Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
@@ -155,7 +155,9 @@ Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
 **DoD:** Reload trang giữ nguyên hồ sơ; đổi dụng cụ → chương trình đổi bài tương ứng.
 
-### Sprint 3 — Workout Player (1 tuần) — sprint quan trọng nhất
+### Sprint 3 — Workout Player (1 tuần) — sprint quan trọng nhất ✅ Hoàn thành
+
+> Ghi chú: route `/workout` không tham số — mỗi lúc chỉ một buổi đang tập. Kế hoạch buổi được chụp lại lúc bắt đầu (`session.plan`). Bắt đầu buổi từ nút "Bắt đầu buổi A/B" trên trang giai đoạn; chọn buổi kế tiếp tự động và tuần deload để Sprint 4. Báo đau tạo `Suggestion` loại `regress` chờ Sprint 4 xử lý.
 
 | Việc                                                                                                      | FR / NFR                   |
 | --------------------------------------------------------------------------------------------------------- | -------------------------- |

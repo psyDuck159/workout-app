@@ -1,4 +1,5 @@
 import type { Gear } from "@/content/schema";
+import type { PlannedItem, PlayerState } from "@/domain/session";
 
 export type Goal = "general" | "muscle" | "fat_loss" | "skill";
 export type SessionMinutes = 15 | 30 | 45;
@@ -32,13 +33,17 @@ export interface LadderState {
   updatedAt: string;
 }
 
-// Các bảng dưới đây được tạo sẵn trong schema v1, dùng từ Sprint 3–4.
-
 export interface WorkoutSession {
   id: string;
   programId: string;
   phaseId: string;
   sessionTemplateId: string;
+  /** VD "Buổi A — Toàn thân A". */
+  titleVi: string;
+  /** Kế hoạch chụp lại lúc bắt đầu buổi. */
+  plan: PlannedItem[];
+  /** Trạng thái player, lưu sau mỗi thao tác để tiếp tục được khi tải lại. */
+  player: PlayerState;
   startedAt: string;
   endedAt?: string;
   status: "in_progress" | "completed" | "abandoned";

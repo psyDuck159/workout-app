@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PlanSummary from "@/components/profile/PlanSummary";
+import ActiveSessionBanner from "@/components/workout/ActiveSessionBanner";
 import { buttonVariants } from "@/components/ui/button";
 import { defaultProgram, exercises } from "@/content";
 
@@ -16,6 +17,7 @@ export default function Home() {
         </p>
       </header>
 
+      <ActiveSessionBanner />
       <PlanSummary firstPhaseHref={`/program/phase/${program.phases[0].id}`} />
 
       <section className="bg-card space-y-3 rounded-lg border p-4">
