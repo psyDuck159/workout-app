@@ -2,6 +2,7 @@ import "server-only";
 import { z } from "zod";
 import { Attribution, Exercise, Ladder, Program } from "./schema";
 import type { GearIndex } from "@/data/repositories";
+import type { ProgramClientData } from "./client";
 import push from "./exercises/push.json";
 import pull from "./exercises/pull.json";
 import legs from "./exercises/legs.json";
@@ -56,3 +57,17 @@ export const gearIndex: GearIndex = {
   })),
   exercises: exercises.map((e) => ({ id: e.id, equipment: e.equipment })),
 };
+
+/** Dữ liệu chương trình gửi xuống client để lập lịch, bắt đầu buổi và chạy engine tăng tiến. */
+export function programClientData(): ProgramClientData {
+  return {
+    program: defaultProgram,
+    ladders: ladders.map((l) => ({ id: l.id, nameVi: l.nameVi, steps: l.steps })),
+    exercises: exercises.map((e) => ({
+      id: e.id,
+      nameVi: e.nameVi,
+      equipment: e.equipment,
+      measure: e.measure,
+    })),
+  };
+}

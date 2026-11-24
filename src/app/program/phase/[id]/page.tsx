@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import PhaseSessions from "@/components/PhaseSessions";
-import { defaultProgram, exercises, getPhase, ladders } from "@/content";
+import { defaultProgram, getPhase, programClientData } from "@/content";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -43,18 +43,7 @@ export default async function PhasePage({ params }: Props) {
         </p>
       </header>
 
-      <PhaseSessions
-        programId={defaultProgram.id}
-        phaseId={phase.id}
-        sessions={phase.sessions}
-        ladders={ladders}
-        exercises={exercises.map(({ id, nameVi, equipment, measure }) => ({
-          id,
-          nameVi,
-          equipment,
-          measure,
-        }))}
-      />
+      <PhaseSessions data={programClientData()} phaseId={phase.id} />
     </main>
   );
 }

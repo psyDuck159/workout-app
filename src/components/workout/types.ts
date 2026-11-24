@@ -1,4 +1,4 @@
-import type { Exercise } from "@/content/schema";
+import type { AdvanceWhen, Exercise } from "@/content/schema";
 
 /** Thông tin bài tập gửi xuống player (gọn hơn Exercise đầy đủ). */
 export type WorkoutExercise = Pick<
@@ -10,4 +10,7 @@ export type WorkoutExercise = Pick<
   cues: string[];
 };
 
-export type WorkoutLadder = { id: string; steps: { exerciseId: string }[] };
+export type WorkoutLadder = {
+  id: string;
+  steps: { exerciseId: string; advanceWhen?: AdvanceWhen }[];
+};

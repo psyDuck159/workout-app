@@ -6,7 +6,7 @@ import { useProfile } from "@/data/hooks";
 import { buttonVariants } from "@/components/ui/button";
 
 /** Trang chủ: mời thiết lập nếu chưa có hồ sơ, ngược lại tóm tắt kế hoạch. */
-export default function PlanSummary({ firstPhaseHref }: { firstPhaseHref: string }) {
+export default function PlanSummary() {
   const { data: profile, loading } = useProfile();
 
   if (loading) return <div className="bg-muted h-36 animate-pulse rounded-lg" aria-hidden />;
@@ -49,9 +49,6 @@ export default function PlanSummary({ firstPhaseHref }: { firstPhaseHref: string
         </div>
       </dl>
       <div className="flex flex-wrap gap-2">
-        <Link href={firstPhaseHref} className={buttonVariants()}>
-          Xem buổi tập
-        </Link>
         <Link href="/settings" className={buttonVariants({ variant: "outline" })}>
           Chỉnh sửa
         </Link>

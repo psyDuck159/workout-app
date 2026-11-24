@@ -1,8 +1,10 @@
 import Link from "next/link";
 import PlanSummary from "@/components/profile/PlanSummary";
 import ActiveSessionBanner from "@/components/workout/ActiveSessionBanner";
+import SuggestionList from "@/components/workout/SuggestionList";
+import TodayCard from "@/components/workout/TodayCard";
 import { buttonVariants } from "@/components/ui/button";
-import { defaultProgram, exercises } from "@/content";
+import { defaultProgram, exercises, programClientData } from "@/content";
 
 export default function Home() {
   const program = defaultProgram;
@@ -18,7 +20,9 @@ export default function Home() {
       </header>
 
       <ActiveSessionBanner />
-      <PlanSummary firstPhaseHref={`/program/phase/${program.phases[0].id}`} />
+      <TodayCard data={programClientData()} />
+      <SuggestionList exerciseNames={Object.fromEntries(exercises.map((e) => [e.id, e.nameVi]))} />
+      <PlanSummary />
 
       <section className="bg-card space-y-3 rounded-lg border p-4">
         <h2 className="font-semibold">{program.nameVi}</h2>

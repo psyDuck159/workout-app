@@ -9,6 +9,8 @@ export interface UserProfile {
   id: "me";
   goal: Goal;
   daysPerWeek: number;
+  /** Ngày tập ưa thích (0 = CN … 6 = T7), chỉ để nhắc — lịch vẫn là hàng đợi. */
+  preferredDays?: number[];
   sessionMinutes: SessionMinutes;
   gear: Gear[];
   activeProgramId: string;
@@ -71,6 +73,11 @@ export interface Suggestion {
   reasonVi: string;
   createdAt: string;
   status: "pending" | "accepted" | "dismissed";
+  ladderId?: string;
+  /** Bậc đích khi lên/hạ bậc. */
+  toExerciseId?: string;
+  /** Buổi tập sinh ra đề xuất. */
+  sessionId?: string;
 }
 
 export interface MetaEntry {

@@ -8,7 +8,7 @@ import type { Settings, UserProfile } from "@/data/types";
 import { getPersistState, requestPersistentStorage, type PersistState } from "@/platform/storage";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ToggleCard } from "@/components/ChoiceGroup";
-import { GearFields, GoalField, ScheduleFields } from "./ProfileFields";
+import { GearFields, GoalField, PreferredDaysField, ScheduleFields } from "./ProfileFields";
 
 const persistLabels: Record<PersistState, string> = {
   granted: "Đã bật — trình duyệt sẽ không tự xóa dữ liệu.",
@@ -116,6 +116,10 @@ function ProfileSection({
         sessionMinutes={draft.sessionMinutes}
         onDaysChange={(daysPerWeek) => update({ daysPerWeek })}
         onMinutesChange={(sessionMinutes) => update({ sessionMinutes })}
+      />
+      <PreferredDaysField
+        value={draft.preferredDays ?? []}
+        onChange={(preferredDays) => update({ preferredDays })}
       />
       <GoalField value={draft.goal} onChange={(goal) => update({ goal })} />
     </section>

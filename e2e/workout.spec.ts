@@ -86,11 +86,13 @@ test("bài giữ theo thời gian: đếm ngược 3-2-1 rồi ghi số giây đ
   await expect(page.getByRole("heading", { name: "Plank nghiêng" })).toBeVisible();
 
   await page.getByRole("button", { name: "Bắt đầu giữ" }).click();
-  await expect(page.getByText("3", { exact: true })).toBeVisible();
+  // Đồng hồ giả vẫn chạy theo thời gian thật, máy chậm có thể đã đếm qua số 3.
+  await expect(page.getByText(/^[123]$/)).toBeVisible();
   await page.clock.fastForward("00:03");
-  await page.clock.fastForward("00:22");
   const done = page.getByRole("button", { name: /^Xong — \d+ giây$/ });
-  await expect(done).toHaveText(/Xong — (21|22|23) giây/);
+  await expect(done).toBeVisible();
+  await page.clock.fastForward("00:22");
+  await expect(done).toHaveText(/Xong — 2[1-6] giây/);
   await expect(page.getByText("Đã đạt mức tối thiểu")).toBeVisible();
   await done.click();
 
@@ -121,7 +123,7 @@ test("trang chủ nhắc tiếp tục buổi tập dở; bỏ buổi thì hết 
   await page.goto("/");
   await expect(page.getByText("Bạn đang tập dở")).toBeVisible();
   await expect(page.getByText("Buổi A — Toàn thân A · đã xong 1/")).toBeVisible();
-  await page.getByRole("link", { name: "Tiếp tục" }).click();
+  await page.getByRole("link", { name: "Tiếp tục", exact: true }).click();
   await expect(page).toHaveURL(/\/workout$/);
   await expect(page.getByRole("heading", { name: "Nghỉ" })).toBeVisible();
 

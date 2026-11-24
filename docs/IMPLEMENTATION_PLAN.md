@@ -107,7 +107,7 @@ scripts/
 
 ## 3. Lộ trình sprint — MVP (≈ 6 tuần)
 
-**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ✅ · Sprint 3 ✅ · Sprint 4 ⏭ tiếp theo
+**Tiến độ (24/11/2026):** Sprint 0 ✅ · Sprint 1 ✅ · Sprint 2 ✅ · Sprint 3 ✅ · Sprint 4 ✅ · Sprint 5 ⏭ tiếp theo
 
 Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
@@ -173,7 +173,9 @@ Ký hiệu: **DoD** = Definition of Done. Mã FR/NFR tham chiếu SRS.
 
 **DoD:** E2E: bắt đầu buổi → ghi 3 hiệp → reload → tiếp tục đúng vị trí → hoàn thành. Timer đúng ±1s sau khi chuyển tab 2 phút.
 
-### Sprint 4 — Tăng tiến, lịch, trang chủ, lịch sử (1 tuần)
+### Sprint 4 — Tăng tiến, lịch, trang chủ, lịch sử (1 tuần) ✅ Hoàn thành
+
+> Ghi chú: tiêu chí lên bậc = mức thấp hơn giữa tiêu chí của thang và mục tiêu tối đa của giai đoạn; đánh giá "Vừa" = RPE 7. Engine chỉ xét các buổi sau lần đổi bậc gần nhất (tránh lên/xuống liên tục). Lịch là hàng đợi: mỗi giai đoạn cần `tuần × số buổi/tuần` buổi; tuần cuối tự giảm ~50% số hiệp, nghỉ ≥ 10 ngày thì buổi quay lại giảm ~30%. Thêm chọn ngày tập ưa thích trong Cài đặt (chỉ để nhắc). Tham số ở `src/domain/progressionConfig.ts`.
 
 | Việc                                                                                                                                                  | FR                                   |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
